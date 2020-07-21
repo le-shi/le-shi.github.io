@@ -167,8 +167,8 @@ Thank you very much :
     2. wps:
         
         ```bash
-        wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/8392/wps-office_11.1.0.8392_amd64.deb
-        sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
+        wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9604/wps-office_11.1.0.9604_amd64.deb
+        sudo dpkg -i wps-office_11.1.0.9604_amd64.deb
         ```
 
 9. vpn
@@ -532,8 +532,8 @@ sudo apt update
 sudo apt install -y code
 
 # install wps
-wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/8392/wps-office_11.1.0.8392_amd64.deb
-sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
+wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9604/wps-office_11.1.0.9604_amd64.deb
+sudo dpkg -i wps-office_11.1.0.9604_amd64.deb
 
 # install vpn
 wget -Nc https://files02.tchspt.com/storage2/temp/openvpn-2.4.7.tar.gz
