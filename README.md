@@ -73,7 +73,6 @@ Thank you very much :
     yes | ./install.sh
     wget -qO- https://deepin-wine.i-m.dev/setup.sh | sudo sh
     ```
-
     1. wine-微信: `sudo apt install -y deepin.com.wechat`
     1. wine-TIM: `sudo apt install -y deepin.com.qq.office`
     1. Tencent QQ
