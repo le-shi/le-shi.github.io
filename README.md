@@ -6,6 +6,9 @@ Thank you very much :
 | [**为Linux Mint设置为雅黑字体**](https://blog.csdn.net/wangrui1573/article/details/81973919)
 
 <!-- 时间格式: %A %m月%d日 %H:%M:%S -->
+
+搜狗拼音和wps还不支持Mint20版本,替代方案用fcitx的拼音和自带的libreOffice
+
 > LinuxMint 18.x, 19.x, 20.x
 
 # LinuxMint下工具的安装
