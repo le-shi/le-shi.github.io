@@ -393,8 +393,8 @@ Thank you very much :
         
         ```bash
         # 依赖于Fcitx框架
-        wget -Nc http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
-        sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+        wget -Nc http://cdn2.ime.sogou.com/dl/index/1571302197/sogoupinyin_2.3.1.0112_amd64.deb
+        sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
         # 可能会有一些包没有安装，通过--fix-broken来解决冲突，并安装上sougoupinyin
         sudo apt-get --fix-broken -y install
         # 重启，我是重启了
@@ -601,8 +601,8 @@ sudo apt install -y meld
 sudo apt install -y brasero
 
 # install sougoupinyin
-wget -Nc http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
-sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+wget -Nc http://cdn2.ime.sogou.com/dl/index/1571302197/sogoupinyin_2.3.1.0112_amd64.deb
+sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
 sudo apt-get --fix-broken -y install
 
 # install typora
