@@ -2,8 +2,8 @@
 
 Thank you very much :
 [**erikdubois**](https://github.com/erikdubois)
-[**Linux发行版软件**](https://www.lulinux.com/archives/2787)
-[**为Linux Mint设置为雅黑字体**](https://blog.csdn.net/wangrui1573/article/details/81973919)
+| [**Linux发行版软件**](https://www.lulinux.com/archives/2787)
+| [**为Linux Mint设置为雅黑字体**](https://blog.csdn.net/wangrui1573/article/details/81973919)
 
 <!-- 时间格式: %A %m月%d日 %H:%M:%S -->
 > LinuxMint 18.x, 19.x, 20.x
