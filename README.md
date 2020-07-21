@@ -1,17 +1,14 @@
 # keke-cat.github.io
-# Hint leshi
 
 Thank you very much :
-> [erikdubois](https://github.com/erikdubois)
+[**erikdubois**](https://github.com/erikdubois)
+[**Linux发行版软件**](https://www.lulinux.com/archives/2787)
+[**为Linux Mint设置为雅黑字体**](https://blog.csdn.net/wangrui1573/article/details/81973919)
 
-> [Linux发行版软件](https://www.lulinux.com/archives/2787)
+<!-- 时间格式: %A %m月%d日 %H:%M:%S -->
+> LinuxMint 18.x, 19.x, 20.x
 
-> [为Linux Mint设置为雅黑字体](https://blog.csdn.net/wangrui1573/article/details/81973919)
-
-时间格式: %A %m月%d日 %H:%M:%S
-
-# Linux下工具的安装
----
+# LinuxMint下工具的安装
 基于Apt的软件
 1. 聊天工具， 微信; TIM; Tencent QQ
 1. ssh工具，Remmina; deepin-terminal
@@ -49,14 +46,12 @@ Thank you very much :
 1. 一些有趣的linux命令
 
 ---
-基于snap的软件(安装服务后需要重启才能使用)
+基于**snap**的软件(安装服务后需要重启才能使用)
 安装snap: sudo apt install snapd snapcraft
 安装snap商店: sudo snap install snap-store
 1. redis客户端: RedisDesktopManager
 1. git客户端: GitKraken
 
-
----
 ---
 
 + 安装记录：
