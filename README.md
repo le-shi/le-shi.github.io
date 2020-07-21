@@ -67,45 +67,50 @@ Thank you very much :
     1. TIM，微信: 需要安装[deepin-wine环境](https://github.com/wszqkzqk/deepin-wine-ubuntu);
     然后去[Deepin-wine 容器的存档](https://gitee.com/wszqkzqk/deepin-wine-containers-for-ubuntu/);
     下载对应的包
-    ```bash
-    git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
-    cd deepin-wine-for-ubuntu
-    yes | ./install.sh
-    wget -qO- https://deepin-wine.i-m.dev/setup.sh | sudo sh
-    ```
+
+        ```bash
+        git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
+        cd deepin-wine-for-ubuntu
+        yes | ./install.sh
+        wget -qO- https://deepin-wine.i-m.dev/setup.sh | sudo sh
+        ```
+
     1. wine-微信: `sudo apt install -y deepin.com.wechat`
     1. wine-TIM: `sudo apt install -y deepin.com.qq.office`
     1. Tencent QQ
-    ```bash
-    wget -Nc https://qd.myapp.com/myapp/qqteam/linuxQQ/linuxqq_2.0.0-b1-1024_amd64.deb
-    sudo dpkg -i linuxqq_2.0.0-b1-1024_amd64.deb
-    ```
+        
+        ```bash
+        wget -Nc https://qd.myapp.com/myapp/qqteam/linuxQQ/linuxqq_2.0.0-b1-1024_amd64.deb
+        sudo dpkg -i linuxqq_2.0.0-b1-1024_amd64.deb
+        ```
 
 2. ssh工具
     1. Remmina:
-    ```bash
-    sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
-    sudo apt update
-    sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
-    ```
+        
+        ```bash
+        sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+        sudo apt update
+        sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
+        ```
 
     1. 深度终端: 
-    
-    ```bash
-    # deepin-terminal 2.9.2
-    sudo apt-get --fix-broken install
-    sudo apt install -y deepin-menu expect lrzsz zssh
-    wget -Nc http://kr.archive.ubuntu.com/ubuntu/pool/universe/d/deepin-terminal/deepin-terminal_2.9.2-1_amd64.deb
-    sudo dpkg -i deepin-terminal_2.9.2-1_amd64.deb
+        
+        ```bash
+        # deepin-terminal 2.9.2
+        sudo apt-get --fix-broken install
+        sudo apt install -y deepin-menu expect lrzsz zssh
+        wget -Nc http://kr.archive.ubuntu.com/ubuntu/pool/universe/d/deepin-terminal/deepin-terminal_2.9.2-1_amd64.deb
+        sudo dpkg -i deepin-terminal_2.9.2-1_amd64.deb
 
-    # deepin-terminal 3.0以上版本依赖libc6 (>= 2.29)
-    ```
+        # deepin-terminal 3.0以上版本依赖libc6 (>= 2.29)
+        ```
 
 3. 终端 - 支持选中复制
     1. terminator: `sudo apt install -y terminator`
 
 4. 复古终端
     1. cool-retro-term:
+
         ```bash
         sudo add-apt-repository ppa:vantuz/cool-retro-term
         sudo apt update
@@ -117,15 +122,17 @@ Thank you very much :
         + 问题1: 长时间不关闭，会导致物理和虚拟内存的占用非常高，需要重启浏览器
     2. Firefox: Mint系统自带
     3. chrome: 
-    ```bash
-    wget -Nc https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg -i google-chrome-stable_current_amd64.deb
-    ```
+        
+        ```bash
+        wget -Nc https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i google-chrome-stable_current_amd64.deb
+        ```
 
 6. 科学工具
     1. shadowsocks: `pip install shadowsocks privoxy`
     2. chrome插件:
         + setupvpn:
+        
         ```bash
         wget -Nc https://baseserver.io/sv/client/download/Chrome-SetupVPN-3.7.0.crx
         拖拽到浏览器chrome安装
@@ -133,73 +140,83 @@ Thank you very much :
 
 7. 文本编辑器
     1. atom:
-    ```bash
-    wget -Nc https://github.com/atom/atom/releases/download/v1.38.1/atom-amd64.deb
-    sudo dpkg -i atom-amd64.deb
-    ```
+
+        ```bash
+        wget -Nc https://github.com/atom/atom/releases/download/v1.38.1/atom-amd64.deb
+        sudo dpkg -i atom-amd64.deb
+        ```
+
     1. vsCode:
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-    sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-    sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-    sudo apt install -y apt-transport-https
-    sudo apt update
-    sudo apt install -y code
-    ```
+        
+        ```bash
+        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+        sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+        sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+        sudo apt install -y apt-transport-https
+        sudo apt update
+        sudo apt install -y code
+        ```
+
     1. Unity:
-    ```bash
-    wget -Nc https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.AppImage
-    chmod +x UnityHubSetup.AppImage
-    ./UnityHubSetup.AppImage
-    # 启动 Unity Hub 后，它会要求你使用 Unity ID 登录（或注册）以激活许可证。
-    # 使用 Unity ID 登录后，进入 “Installs” 选项（如上图所示）并添加所需的版本/组件。
-    ```
+        
+        ```bash
+        wget -Nc https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.AppImage
+        chmod +x UnityHubSetup.AppImage
+        ./UnityHubSetup.AppImage
+        # 启动 Unity Hub 后，它会要求你使用 Unity ID 登录（或注册）以激活许可证。
+        # 使用 Unity ID 登录后，进入 “Installs” 选项（如上图所示）并添加所需的版本/组件。
+        ```
 
 8. wps
     1. LibreOffice: Mint系统自带
     2. wps:
-    ```bash
-    wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/8392/wps-office_11.1.0.8392_amd64.deb
-    sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
-    ```
+        
+        ```bash
+        wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/8392/wps-office_11.1.0.8392_amd64.deb
+        sudo dpkg -i wps-office_11.1.0.8392_amd64.deb
+        ```
 
 9. vpn
     1. openvpn: [官网下载客户端](https://www.techspot.com/downloads/5182-openvpn.html)
-    ```bash
-    wget -Nc https://files02.tchspt.com/storage2/temp/openvpn-2.4.7.tar.gz
-    sudo apt install -y openssl libssl-dev net-tools liblzo2-dev libpam0g-dev
-    tar -zxf openvpn-2.4.7.tar.gz
-    cd openvpn-2.4.7
-    ./configure
-    make
-    sudo make install
-    ```
+    
+        ```bash
+        wget -Nc https://files02.tchspt.com/storage2/temp/openvpn-2.4.7.tar.gz
+        sudo apt install -y openssl libssl-dev net-tools liblzo2-dev libpam0g-dev
+        tar -zxf openvpn-2.4.7.tar.gz
+        cd openvpn-2.4.7
+        ./configure
+        make
+        sudo make install
+        ```
     1. esayconnect:
-    ```bash
-    wget -Nc http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.deb
-    sudo dpkg -i EasyConnect_x64.deb
-    #rpm的 http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.rpm
-    ```
+    
+        ```bash
+        wget -Nc http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.deb
+        sudo dpkg -i EasyConnect_x64.deb
+        #rpm的 http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.rpm
+        ```
 
 10. pdf查看器
     1. okular: `sudo apt install -y okular`
 
 11. 远程工具
     1. teamviewer:
-    ```bash
-    wget -Nc https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-    sudo dpkg -i teamviewer_amd64.deb
-    sudo apt-get --fix-broken -y install
-    ```
+    
+        ```bash
+        wget -Nc https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+        sudo dpkg -i teamviewer_amd64.deb
+        sudo apt-get --fix-broken -y install
+        ```
 
 12. py工具,py环境
     1. pycharm：
-    ```bash
-    wget -Nc https://download.jetbrains.8686c.com/python/pycharm-community-2019.2.3.tar.gz
-    sudo tar -zxf pycharm-community-2019.2.3.tar.gz -C /usr/local/share
-    ln -s /usr/local/share/pycharm-community-2019.2.3/bin/pycharm.sh ~/桌面
-    # 运行时选择运行
-    ```
+    
+        ```bash
+        wget -Nc https://download.jetbrains.8686c.com/python/pycharm-community-2019.2.3.tar.gz
+        sudo tar -zxf pycharm-community-2019.2.3.tar.gz -C /usr/local/share
+        ln -s /usr/local/share/pycharm-community-2019.2.3/bin/pycharm.sh ~/桌面
+        # 运行时选择运行
+        ```
     1. py2: Mint系统自带, python -V
     2. pip2: Mint系统自带, pip2 -V
     3. py3: Mint系统自带, python3 -V
@@ -207,70 +224,80 @@ Thank you very much :
 
 13. go工具: 
     1. go
-    ```bash
-    wget -Nc https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
-    sudo tar -zxf go1.13.1.linux-amd64.tar.gz -C  /usr/local
-    echo -e '#go\nexport GOPATH=/usr/local/go\nexport PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
-    ```
+    
+        ```bash
+        wget -Nc https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
+        sudo tar -zxf go1.13.1.linux-amd64.tar.gz -C  /usr/local
+        echo -e '#go\nexport GOPATH=/usr/local/go\nexport PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+        ```
+
     1. liteIDE
-    ```bash
-    wget -Nc https://github.com/visualfc/liteide/releases/download/x36.1/liteidex36.1.linux64-qt5.5.1.tar.gz
-    sudo tar -zxf liteidex36.1.linux64-qt5.5.1.tar.gz -C /usr/local
-    ln -s /usr/local/liteide/bin/liteide ~/桌面/
-    ```
+        
+        ```bash
+        wget -Nc https://github.com/visualfc/liteide/releases/download/x36.1/liteidex36.1.linux64-qt5.5.1.tar.gz
+        sudo tar -zxf liteidex36.1.linux64-qt5.5.1.tar.gz -C /usr/local
+        ln -s /usr/local/liteide/bin/liteide ~/桌面/
+        ```
 
 14. node工具:
     1. node,npm
-    ```bash
-    wget -Nc https://cdn.npm.taobao.org/dist/node/v12.13.0/node-v12.13.0-linux-x64.tar.xz
-    sudo tar -xf node-v12.13.0-linux-x64.tar.xz -C /usr/local/
-    sudo ln -s /usr/local/node-v12.13.0-linux-x64/bin/{node,npm,cnpm} /usr/local/bin/
-    sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
-    # echo -e '# node\nexport NODEPATH=/usr/local/node-v12.13.0-linux-x64\nexport PATH=$PATH:$NODEPATH/bin' >> ~/.bashrc
-    ```
+        
+        ```bash
+        wget -Nc https://cdn.npm.taobao.org/dist/node/v12.13.0/node-v12.13.0-linux-x64.tar.xz
+        sudo tar -xf node-v12.13.0-linux-x64.tar.xz -C /usr/local/
+        sudo ln -s /usr/local/node-v12.13.0-linux-x64/bin/{node,npm,cnpm} /usr/local/bin/
+        sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
+        # echo -e '# node\nexport NODEPATH=/usr/local/node-v12.13.0-linux-x64\nexport PATH=$PATH:$NODEPATH/bin' >> ~/.bashrc
+        ```
+
     1. vue-cli: `cnpm install -g vue-cli`
 
 
 15. 开发工具箱:
     1. JetBrains ToolBox `[Pycharm, IDEA, GoLand, DataGrip, WebStorm]`
-    ```bash
-    wget -Nc https://download.jetbrains.8686c.com/toolbox/jetbrains-toolbox-1.15.5796.tar.gz
-    sudo tar -zxf jetbrains-toolbox-1.15.5796.tar.gz -C /usr/local/share/
-    ```
+        
+        ```bash
+        wget -Nc https://download.jetbrains.8686c.com/toolbox/jetbrains-toolbox-1.15.5796.tar.gz
+        sudo tar -zxf jetbrains-toolbox-1.15.5796.tar.gz -C /usr/local/share/
+        ```
 
 16. JetBrains公司的CI/CD工具
     1. TeamCity:
-    ```bash
-    wget -Nc https://download.jetbrains.8686c.com/teamcity/TeamCity-2019.1.4.tar.gz
-    sudo tar -zxf TeamCity-2019.1.4.tar.gz -C /usr/local/share/
-    ```
-
+        
+        ```bash
+        wget -Nc https://download.jetbrains.8686c.com/teamcity/TeamCity-2019.1.4.tar.gz
+        sudo tar -zxf TeamCity-2019.1.4.tar.gz -C /usr/local/share/
+        ```
 
 17. 版本控制客户端
     1. git: `sudo apt install -y git`
     2. gitkraken:
-    ```bash
-    wget -Nc https://release.axocdn.com/linux/gitkraken-amd64.deb
-    sudo dpkg -i gitkraken-amd64.deb
-    ```
+        
+        ```bash
+        wget -Nc https://release.axocdn.com/linux/gitkraken-amd64.deb
+        sudo dpkg -i gitkraken-amd64.deb
+        ```
+
     1. svn: `sudo apt install -y subversion`
     2. RapidSVN: `sudo apt install -y rapidsvn`
 
 18. git仓库概览工具
     1. onefetch
-    ```bash
-    wget -Nc https://github.com/o2sh/onefetch/releases/download/1.7.0/onefetch_linux_x86-64.zip
-    sudo unzip onefetch_linux_x86-64.zip -d /usr/local/bin/
-    # 使用：在每个仓库下使用此命令
-    ```
+        
+        ```bash
+        wget -Nc https://github.com/o2sh/onefetch/releases/download/1.7.0/onefetch_linux_x86-64.zip
+        sudo unzip onefetch_linux_x86-64.zip -d /usr/local/bin/
+        # 使用：在每个仓库下使用此命令
+        ```
 
 
 19. 数据库客户端
     1. dbeaver:
-    ```bash
-    wget -Nc https://github.com/dbeaver/dbeaver/releases/download/6.3.1/dbeaver-ce_6.3.1_amd64.deb
-    sudo dpkg -i dbeaver-ce_6.3.1_amd64.deb
-    ```
+        
+        ```bash
+        wget -Nc https://github.com/dbeaver/dbeaver/releases/download/6.3.1/dbeaver-ce_6.3.1_amd64.deb
+        sudo dpkg -i dbeaver-ce_6.3.1_amd64.deb
+        ```
 
 20. 打包工具
     1. tar: Mint系统自带
@@ -288,25 +315,30 @@ Thank you very much :
     1. 下拉式终端 tilda: `sudo apt install -y tilda`
     2. 下拉式GNOME终端: `sudo apt install guake`
     3. HTTP 协议文件共享服务 Chfs:
-    ```bash
-    wget -Nc http://iscute.cn/tar/chfs/1.10/chfs-linux-amd64-1.10.zip
-    unzip chfs-linux-amd64-1.10.zip
-    chmod +x chfs
-    ./chfs --port 8080 --path /path/to
-    ```
+    
+        ```bash
+        wget -Nc http://iscute.cn/tar/chfs/1.10/chfs-linux-amd64-1.10.zip
+        unzip chfs-linux-amd64-1.10.zip
+        chmod +x chfs
+        ./chfs --port 8080 --path /path/to
+        ```
+
     1. MAC主题包 Cairo-dock:
-    ```bash
-    系统管理-软件管理器-搜索'Cairo-dock'
-    安装,设置开机自启动
-    ```
+    
+        ```bash
+        系统管理-软件管理器-搜索'Cairo-dock'
+        安装,设置开机自启动
+        ```
+
     1. 截图工具
         + ~~Shutter: `sudo apt install -y shutter`~~ --不好用
         + flameshot:
-    ```bash
-    sudo apt install -y flameshot
-    设置系统快捷键，可取消显示托盘图标
-    快捷键指定命令: '/usr/bin/flameshot gui'
-    ```
+        
+        ```bash
+        sudo apt install -y flameshot
+        设置系统快捷键，可取消显示托盘图标
+        快捷键指定命令: '/usr/bin/flameshot gui'
+        ```
 
 24. ftp工具
     1. FileZilla: `sudo apt install -y filezilla`
@@ -315,6 +347,7 @@ Thank you very much :
     1. rdesktop: *either-or*
         apt(1.8.3-2build1): `sudo apt install -y rdesktop`
         source(1.9.0):
+        
         ```bash
         sudo apt install -y gcc libkrb5-dev libtasn1-6 libtasn1-6-dev nettle-dev  ibgnutls28-dev libpcsclite-dev
         wget -Nc https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
@@ -333,61 +366,69 @@ Thank you very much :
 
 27. 笔记
     1. nixnote2:
-    ```bash
-    sudo add-apt-repository ppa:nixnote/nixnote2-daily
-    sudo apt update
-    sudo apt install nixnote2
-    # 然后在'file文件'中建立账户,然后使用建立的账户，
-    # 选择“印象笔记”（这个是国服），使用'工具'中的同步，这时会进入印象笔记大陆的服务器，
-    # 如果选择的是印象笔记国际版，进入的就是国际版。
-    # 两个域名是不一样的，在没登录前可以在~/.nixnote/accounts.conf中看到。
-    # 登录页面左上角也不一样，国际版是Eventnote，国服是印象笔记。
-    # 在登录国服时候，输入完邮箱地址一直不会显示密码框，
-    # 这个时候点击左上角的“印象笔记”链接，然后会打开网页版的印象笔记页面，在里面找到登录页面，正常登录。
-    # 然后关闭登录框，再从'工具'中的同步进入，这个时候就会看到授权提示了。
-    ```
+        
+        ```bash
+        sudo add-apt-repository ppa:nixnote/nixnote2-daily
+        sudo apt update
+        sudo apt install nixnote2
+        # 然后在'file文件'中建立账户,然后使用建立的账户，
+        # 选择“印象笔记”（这个是国服），使用'工具'中的同步，这时会进入印象笔记大陆的服务器，
+        # 如果选择的是印象笔记国际版，进入的就是国际版。
+        # 两个域名是不一样的，在没登录前可以在~/.nixnote/accounts.conf中看到。
+        # 登录页面左上角也不一样，国际版是Eventnote，国服是印象笔记。
+        # 在登录国服时候，输入完邮箱地址一直不会显示密码框，
+        # 这个时候点击左上角的“印象笔记”链接，然后会打开网页版的印象笔记页面，在里面找到登录页面，正常登录。
+        # 然后关闭登录框，再从'工具'中的同步进入，这个时候就会看到授权提示了。
+        ```
+
 28. 光盘刻录
     1. Brasero: `sudo apt install -y brasero`
 
 29. 护眼
     1. fluxgui:
-    ```bash
-    sudo add-apt-repository ppa:nathan-renniewaldock/flux
-    sudo apt update
-    sudo apt install -y fluxgui
-    ```
+        
+        ```bash
+        sudo add-apt-repository ppa:nathan-renniewaldock/flux
+        sudo apt update
+        sudo apt install -y fluxgui
+        ```
+
 30. 输入法
     1. sougoupinyin:
-    ```bash
-    # 依赖于Fcitx框架
-    wget -Nc http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
-    sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
-    # 可能会有一些包没有安装，通过--fix-broken来解决冲突，并安装上sougoupinyin
-    sudo apt-get --fix-broken -y install
-    # 重启，我是重启了
-    ```
+        
+        ```bash
+        # 依赖于Fcitx框架
+        wget -Nc http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
+        sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+        # 可能会有一些包没有安装，通过--fix-broken来解决冲突，并安装上sougoupinyin
+        sudo apt-get --fix-broken -y install
+        # 重启，我是重启了
+        ```
 
 31. MD预览
     1. typora:
-    ```bash
-    wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-    sudo add-apt-repository 'deb https://typora.io/linux ./'
-    sudo apt update
-    sudo apt install -y typora
-    ```
+        
+        ```bash
+        wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+        sudo add-apt-repository 'deb https://typora.io/linux ./'
+        sudo apt update
+        sudo apt install -y typora
+        ```
 
 32. 系统监视
     1. [conky](https://github.com/brndnmtthws/conky/) | [configure](https://github.com/erikdubois/Aureola) : `sudo apt install -y hddtemp curl lm-sensors conky-all conky`
     
 33. 录屏
     1. SimpleScreenRecorder
-    ```bash
-    sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
-    sudo apt update
-    sudo apt install -y simplescreenrecorder
-    ```
+        
+        ```bash
+        sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+        sudo apt update
+        sudo apt install -y simplescreenrecorder
+        ```
 
 34. wine
+    
     ```bash
     sudo dpkg --add-architecture i386
     wget -nc https://dl.winehq.org/wine-builds/winehq.key
@@ -439,6 +480,7 @@ Thank you very much :
 
 
 ---
+
 
 
 
@@ -585,6 +627,7 @@ sudo apt install -y simplescreenrecorder
 
 
 ## 安装这里记录的所有的有趣的命令
+
 ```bash
 # (这里使用-y免交互了，注意一下)
 # 在终端开一辆火车
