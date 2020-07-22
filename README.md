@@ -46,8 +46,8 @@ Thank you very much :
 1. 系统监视，conky
 1. 录屏，SimpleScreenRecorder
 1. wine
-1. 一些有趣的linux命令
 1. 容器: docker
+1. 一些有趣的linux命令
 
 ---
 基于**snap**的软件(安装服务后需要重启才能使用)
@@ -438,7 +438,23 @@ Thank you very much :
     #运行"winecfg", 你至少需要运行一次winecfg来设置wine的目录和硬件
     ```
 
-35. 一些有趣的linux命令
+1. 容器: 
+   1. docker
+      ```bash
+      # 安装之前清理旧的版本
+      sudo apt remove docker docker-engine docker.io containerd runc
+      # 安装依赖
+      sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+      # 添加Docker的GPG key
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      # 添加Docker的repository,这里系统的版本不能使用官方提供的命令获取,因为获取的是Mint的版本,需要使用自定义的命令
+      sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(awk -F 'UBUNTU_CODENAME=' '/UBUNTU_CODENAME=/{print $2}' /etc/os-release) stable"
+      sudo apt update
+      # 安装dockerc-ce docker-ce-cli containerd.io
+      sudo apt install -y docker-ce docker-ce-cli containerd.io
+      ```
+
+1. 一些有趣的linux命令
     1. 在终端开一辆火车
        - Install: `sudo apt install sl`
        - Run: `sl` or `sl -F`
@@ -470,21 +486,6 @@ Thank you very much :
        - Install: `sudo apt install rig` 
        - Run: `rig`
 
-1. 容器: 
-   1. docker
-      ```bash
-      # 安装之前清理旧的版本
-      sudo apt remove docker docker-engine docker.io containerd runc
-      # 安装依赖
-      sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-      # 添加Docker的GPG key
-      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-      # 添加Docker的repository,这里系统的版本不能使用官方提供的命令获取,因为获取的是Mint的版本,需要使用自定义的命令
-      sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(awk -F 'UBUNTU_CODENAME=' '/UBUNTU_CODENAME=/{print $2}' /etc/os-release) stable"
-      sudo apt update
-      # 安装dockerc-ce docker-ce-cli containerd.io
-      sudo apt install -y docker-ce docker-ce-cli containerd.io
-      ```
 
 ## 基于snap的软件
 
