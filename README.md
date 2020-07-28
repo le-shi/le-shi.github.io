@@ -294,8 +294,8 @@ Thank you very much :
     1. dbeaver:
         
         ```bash
-        wget -Nc https://github.com/dbeaver/dbeaver/releases/download/6.3.1/dbeaver-ce_6.3.1_amd64.deb
-        sudo dpkg -i dbeaver-ce_6.3.1_amd64.deb
+        wget -Nc https://github.com/dbeaver/dbeaver/releases/download/7.1.3/dbeaver-ce_7.1.3_amd64.deb
+        sudo dpkg -i dbeaver-ce_7.1.3_amd64.deb
         ```
 
 20. 打包工具
@@ -591,8 +591,8 @@ sudo dpkg -i gitkraken-amd64.deb
 sudo apt install -y subversion rapidsvn
 
 # install dbeaver
-wget -Nc https://github.com/dbeaver/dbeaver/releases/download/6.1.0/dbeaver-ce_6.1.0_amd64.deb
-sudo dpkg -i dbeaver-ce_6.1.0_amd64.deb
+wget -Nc https://github.com/dbeaver/dbeaver/releases/download/7.1.3/dbeaver-ce_7.1.3_amd64.deb
+sudo dpkg -i dbeaver-ce_7.1.3_amd64.deb
 
 # install rar
 sudo apt install -y rar
