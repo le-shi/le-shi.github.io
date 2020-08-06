@@ -47,6 +47,7 @@ Thank you very much :
 1. 录屏，SimpleScreenRecorder
 1. wine
 1. 容器: docker
+1. 剪贴板管理器: copyq
 1. 一些有趣的linux命令
 
 ---
@@ -460,6 +461,16 @@ Thank you very much :
       sudo apt install -y docker-ce docker-ce-cli containerd.io
       ```
 
+1. 剪贴板管理器: 
+   1. copyq
+   
+      ```bash
+      sudo add-apt-repository ppa:hluk/copyq
+      sudo apt update
+      sudo apt install -y copyq
+      ```
+
+
 1. 一些有趣的linux命令
     1. 在终端开一辆火车
        - Install: `sudo apt install sl`
@@ -653,6 +664,11 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(awk -F 'UBUNTU_CODENAME=' '/UBUNTU_CODENAME=/{print $2}' /etc/os-release) stable"
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+# copyq
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt update
+sudo apt install -y copyq
 ```
 
 
