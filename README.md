@@ -50,6 +50,7 @@ Thank you very much :
 1. wine
 1. 容器: docker
 1. 剪贴板管理器: copyq
+1. 多显示器使用不同壁纸: nitrogen
 1. 一些有趣的linux命令
 
 ---
@@ -473,6 +474,9 @@ Thank you very much :
       sudo apt install -y copyq
       ```
 
+1. 多显示器使用不同壁纸: 
+   1. nitrogen: `sudo apt install -y nitrogen`
+
 
 1. 一些有趣的linux命令
     1. 在终端开一辆火车
@@ -672,6 +676,9 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo add-apt-repository ppa:hluk/copyq
 sudo apt update
 sudo apt install -y copyq
+
+# nitrogen
+sudo apt install -y nitrogen
 ```
 
 
