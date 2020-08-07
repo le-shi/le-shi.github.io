@@ -30,7 +30,7 @@ Thank you very much :
 1. go工具， go; liteIDE
 1. node工具， node,npm; vue-cli
 1. 开发工具箱，JetBrains ToolBox
-1. 版本控制客户端， git;gitkraken;svn;RapidSVN
+1. 版本控制客户端， git;gitkraken;svn;RapidSVN;kdesvn
 1. git仓库概览工具， onefetch
 1. 数据库客户端， dbeaver
 1. 打包工具， tar;zip
@@ -288,6 +288,7 @@ Thank you very much :
 
     1. svn: `sudo apt install -y subversion`
     2. RapidSVN: `sudo apt install -y rapidsvn`
+    1. kdesvn: `sudo apt install -y kdesvn`
 
 18. git仓库概览工具
     1. onefetch
@@ -606,8 +607,8 @@ sudo tar -zxf liteidex36.1.linux64-qt5.5.1.tar.gz -C /usr/local
 wget -Nc https://release.axocdn.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 
-# install svn rapidsvn
-sudo apt install -y subversion rapidsvn
+# install svn kdesvn
+sudo apt install -y subversion kdesvn
 
 # install dbeaver
 wget -Nc https://github.com/dbeaver/dbeaver/releases/download/7.1.3/dbeaver-ce_7.1.3_amd64.deb
