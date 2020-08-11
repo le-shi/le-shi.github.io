@@ -7,7 +7,7 @@ Thank you very much :
 
 <!-- 时间格式: %A %m月%d日 %H:%M:%S -->
 
-+ 搜狗拼音和wps还不支持Mint20版本,替代方案用fcitx的拼音和自带的libreOffice
++ 搜狗拼音和wps还不支持Mint20版本,替代方案用谷歌拼音和自带的libreOffice
 + deepin-terminal只兼容2.9版本
 
 > LinuxMint 18.x, 19.x, 20.x
