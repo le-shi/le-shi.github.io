@@ -44,7 +44,7 @@ Thank you very much :
 1.  笔记， nixnote2（印象笔记客户端）
 1. 光盘刻录，Brasero
 1. 护眼，fluxgui
-1. 输入法，sougoupinyin
+1. 输入法，sougoupinyin, 谷歌拼音
 1. MD预览，typora
 1. 系统监视，conky
 1. 录屏，SimpleScreenRecorder
@@ -423,6 +423,16 @@ Thank you very much :
         # 重启，我是重启了
         ```
 
+    1. 谷歌拼音: 
+        
+        ```bash
+        # 依赖于Fcitx框架
+        sudo apt install -y fcitx-googlepinyin
+        # 重启，我是重启了
+        ```
+        
+        
+
 31. MD预览
     1. typora:
         
@@ -661,6 +671,9 @@ sudo apt install -y brasero
 wget -Nc http://cdn2.ime.sogou.com/dl/index/1571302197/sogoupinyin_2.3.1.0112_amd64.deb
 sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
 sudo apt-get --fix-broken -y install
+
+# 谷歌拼音
+sudo apt install -y fcitx-googlepinyin
 
 # install typora
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
