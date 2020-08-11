@@ -7,7 +7,8 @@ Thank you very much :
 
 <!-- 时间格式: %A %m月%d日 %H:%M:%S -->
 
-搜狗拼音和wps还不支持Mint20版本,替代方案用fcitx的拼音和自带的libreOffice
++ 搜狗拼音和wps还不支持Mint20版本,替代方案用fcitx的拼音和自带的libreOffice
++ deepin-terminal只兼容2.9版本
 
 > LinuxMint 18.x, 19.x, 20.x
 
@@ -16,7 +17,7 @@ Thank you very much :
 # LinuxMint下工具的安装
 基于Apt的软件
 1. 聊天工具， 微信; TIM; Tencent QQ
-1. ssh工具，Remmina; deepin-terminal
+1. ssh工具，Remmina; deepin-terminal; electerm
 1. 终端， terminator
 1. 复古终端, cool-retro-term
 1. 浏览器， Chromium; Firefox; chrome
@@ -105,7 +106,7 @@ Thank you very much :
         wget -Nc http://kr.archive.ubuntu.com/ubuntu/pool/universe/d/deepin-terminal/deepin-terminal_2.9.2-1_amd64.deb
         sudo dpkg -i deepin-terminal_2.9.2-1_amd64.deb
 
-        # deepin-terminal 5.0.0 --mint 20
+        # deepin-terminal 5.0.0 --mint 20 --pass
         sudo apt-get --fix-broken install
         sudo apt upgrade -y deepin-menu expect lrzsz zssh
         wget -Nc http://kr.archive.ubuntu.com/ubuntu/pool/universe/d/deepin-terminal/deepin-terminal_5.0.0+ds1-2_amd64.deb
@@ -113,6 +114,13 @@ Thank you very much :
 
         # deepin-terminal 3.0以上版本依赖libc6 (>= 2.29)
         ```
+
+    1. electerm:
+       
+       ```bash
+       wget -Nc https://github.com/electerm/electerm/releases/download/v1.4.2/electerm-1.4.2-linux-amd64.deb
+       sudo dpkg -i electerm-1.4.2-linux-amd64.deb
+       ```
 
 3. 终端 - 支持选中复制
     1. terminator: `sudo apt install -y terminator`
@@ -155,7 +163,7 @@ Thank you very much :
         sudo dpkg -i atom-amd64.deb
         ```
 
-    1. vsCode:
+    2. vsCode:
         
         ```bash
         curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -166,7 +174,7 @@ Thank you very much :
         sudo apt install -y code
         ```
 
-    1. Unity:
+    3. Unity:
         
         ```bash
         wget -Nc https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.AppImage
@@ -197,7 +205,7 @@ Thank you very much :
         make
         sudo make install
         ```
-    1. esayconnect:
+    2. esayconnect:
     
         ```bash
         wget -Nc http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.deb
@@ -226,10 +234,10 @@ Thank you very much :
         ln -s /usr/local/share/pycharm-community-2019.2.3/bin/pycharm.sh ~/桌面
         # 运行时选择运行
         ```
-    1. py2: Mint系统自带, python -V
-    2. pip2: Mint系统自带, pip2 -V
-    3. py3: Mint系统自带, python3 -V
-    4. pip3: `sudo apt install -y python3-pip`， pip3 -V
+    2. py2: Mint系统自带, python -V
+    3. pip2: Mint系统自带, pip2 -V
+    4. py3: Mint系统自带, python3 -V
+    5. pip3: `sudo apt install -y python3-pip`， pip3 -V
 
 13. go工具: 
     1. go
@@ -240,7 +248,7 @@ Thank you very much :
         echo -e '#go\nexport GOPATH=/usr/local/go\nexport PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
         ```
 
-    1. liteIDE
+    2. liteIDE
         
         ```bash
         wget -Nc https://github.com/visualfc/liteide/releases/download/x36.1/liteidex36.1.linux64-qt5.5.1.tar.gz
@@ -259,7 +267,7 @@ Thank you very much :
         # echo -e '# node\nexport NODEPATH=/usr/local/node-v12.13.0-linux-x64\nexport PATH=$PATH:$NODEPATH/bin' >> ~/.bashrc
         ```
 
-    1. vue-cli: `cnpm install -g vue-cli`
+    2. vue-cli: `cnpm install -g vue-cli`
 
 
 15. 开发工具箱:
@@ -287,9 +295,9 @@ Thank you very much :
         sudo dpkg -i gitkraken-amd64.deb
         ```
 
-    1. svn: `sudo apt install -y subversion`
-    2. RapidSVN: `sudo apt install -y rapidsvn`
-    1. kdesvn: `sudo apt install -y kdesvn`
+    3. svn: `sudo apt install -y subversion`
+    4. RapidSVN: `sudo apt install -y rapidsvn`
+    5. kdesvn: `sudo apt install -y kdesvn`
 
 18. git仓库概览工具
     1. onefetch
@@ -333,14 +341,14 @@ Thank you very much :
         ./chfs --port 8080 --path /path/to
         ```
 
-    1. MAC主题包 Cairo-dock:
+    4. MAC主题包 Cairo-dock:
     
         ```bash
         系统管理-软件管理器-搜索'Cairo-dock'
         安装,设置开机自启动
         ```
 
-    1. 截图工具
+    5. 截图工具
         + ~~Shutter: `sudo apt install -y shutter`~~ --不好用
         + flameshot:
         
@@ -449,7 +457,7 @@ Thank you very much :
     #运行"winecfg", 你至少需要运行一次winecfg来设置wine的目录和硬件
     ```
 
-1. 容器: 
+35. 容器: 
    1. docker
       ```bash
       # 安装之前清理旧的版本
@@ -465,8 +473,8 @@ Thank you very much :
       sudo apt install -y docker-ce docker-ce-cli containerd.io
       ```
 
-1. 剪贴板管理器: 
-   1. copyq
+36. 剪贴板管理器: 
+   2. copyq
    
       ```bash
       sudo add-apt-repository ppa:hluk/copyq
@@ -474,11 +482,11 @@ Thank you very much :
       sudo apt install -y copyq
       ```
 
-1. 多显示器使用不同壁纸: 
-   1. nitrogen: `sudo apt install -y nitrogen`
+37. 多显示器使用不同壁纸: 
+   3. nitrogen: `sudo apt install -y nitrogen`
 
 
-1. 一些有趣的linux命令
+38. 一些有趣的linux命令
     1. 在终端开一辆火车
        - Install: `sudo apt install sl`
        - Run: `sl` or `sl -F`
@@ -552,9 +560,13 @@ sudo apt install -y deepin.com.wechat
 
 # install deepin-terminal
 sudo apt-get --fix-broken install
-sudo apt upgrade -y deepin-menu expect lrzsz zssh
-wget -Nc http://kr.archive.ubuntu.com/ubuntu/pool/universe/d/deepin-terminal/deepin-terminal_5.0.0+ds1-2_amd64.deb
-sudo dpkg -i deepin-terminal_5.0.0+ds1-2_amd64.deb
+sudo apt install -y deepin-menu expect lrzsz zssh
+wget -Nc http://kr.archive.ubuntu.com/ubuntu/pool/universe/d/deepin-terminal/deepin-terminal_2.9.2-1_amd64.deb
+sudo dpkg -i deepin-terminal_2.9.2-1_amd64.deb
+
+# electerm:
+wget -Nc https://github.com/electerm/electerm/releases/download/v1.4.2/electerm-1.4.2-linux-amd64.deb
+sudo dpkg -i electerm-1.4.2-linux-amd64.deb
 
 # terminator
 sudo apt install -y terminator
