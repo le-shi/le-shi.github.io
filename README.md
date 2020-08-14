@@ -52,6 +52,7 @@ Thank you very much :
 1. 容器: docker
 1. 剪贴板管理器: copyq
 1. 多显示器使用不同壁纸: nitrogen
+1. 多功能top: bashtop
 1. 一些有趣的linux命令
 
 ---
@@ -484,7 +485,7 @@ Thank you very much :
       ```
 
 36. 剪贴板管理器: 
-   2. copyq
+   1. copyq
    
       ```bash
       sudo add-apt-repository ppa:hluk/copyq
@@ -493,10 +494,18 @@ Thank you very much :
       ```
 
 37. 多显示器使用不同壁纸: 
-   3. nitrogen: `sudo apt install -y nitrogen`
+   1. nitrogen: `sudo apt install -y nitrogen`
 
+1. 多功能top: 
+    1. bashtop
 
-38. 一些有趣的linux命令
+        ```bash
+        sudo add-apt-repository ppa:bashtop-monitor/bashtop
+        sudo apt update
+        sudo apt install -y bashtop
+        ```
+
+2.  一些有趣的linux命令
     1. 在终端开一辆火车
        - Install: `sudo apt install sl`
        - Run: `sl` or `sl -F`
@@ -704,6 +713,11 @@ sudo apt install -y copyq
 
 # nitrogen
 sudo apt install -y nitrogen
+
+# bashtop
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo apt update
+sudo apt install -y bashtop
 ```
 
 
