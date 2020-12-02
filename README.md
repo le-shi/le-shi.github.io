@@ -36,7 +36,7 @@ Thank you very much :
 1. 数据库客户端， dbeaver
 1. 打包工具， tar;zip
 1. 下载工具, wget, uget
-1. 局域网端口侦测工具, zenmap
+1. 局域网端口侦测工具, zenmap;tcping
 1. 其他的东西, 下拉式终端tilda;下拉GNOME终端guake; HTTP 协议文件共享服务Chfs; MAC主题包Cairo-dock; 截图工具~~Shutter~~, flameshot
 1. ftp工具，FileZilla
 1. 连接windows，rdesktop
@@ -329,6 +329,14 @@ Thank you very much :
 
 22. 局域网端口侦测工具
     1. zenmap: `sudo apt install -y zenmap`
+    2. tcping: 
+
+        ```bash
+        wget -Nc https://github.com/cloverstd/tcping/releases/download/v0.1.1/tcping-linux-amd64-v0.1.1.tar.gz
+        tar -zxf tcping-linux-amd64-v0.1.1.tar.gz
+        chmod +x tcping
+        sudo mv tcping /usr/bin/
+        ```
 
 23. 其他的东西
     1. 下拉式终端 tilda: `sudo apt install -y tilda`
@@ -424,7 +432,7 @@ Thank you very much :
         # 重启，我是重启了
         ```
 
-    1. 谷歌拼音: 
+    2. 谷歌拼音: 
         
         ```bash
         # 依赖于Fcitx框架
@@ -485,7 +493,7 @@ Thank you very much :
       ```
 
 36. 剪贴板管理器: 
-   1. copyq
+   2. copyq
    
       ```bash
       sudo add-apt-repository ppa:hluk/copyq
@@ -494,9 +502,9 @@ Thank you very much :
       ```
 
 37. 多显示器使用不同壁纸: 
-   1. nitrogen: `sudo apt install -y nitrogen`
+   3. nitrogen: `sudo apt install -y nitrogen`
 
-1. 多功能top: 
+38. 多功能top: 
     1. bashtop
 
         ```bash
@@ -505,7 +513,7 @@ Thank you very much :
         sudo apt install -y bashtop
         ```
 
-2.  一些有趣的linux命令
+39. 一些有趣的linux命令
     1. 在终端开一辆火车
        - Install: `sudo apt install sl`
        - Run: `sl` or `sl -F`
