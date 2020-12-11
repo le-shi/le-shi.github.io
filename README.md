@@ -35,7 +35,7 @@ Thank you very much :
 1. git仓库概览工具， onefetch
 1. 数据库客户端， dbeaver
 1. 打包工具， tar;zip
-1. 下载工具, wget, uget
+1. 下载工具, wget, uget, aria2
 1. 局域网端口侦测工具, zenmap;tcping
 1. 其他的东西, 下拉式终端tilda;下拉GNOME终端guake; HTTP 协议文件共享服务Chfs; MAC主题包Cairo-dock; 截图工具~~Shutter~~, flameshot
 1. ftp工具，FileZilla
@@ -326,6 +326,26 @@ Thank you very much :
 21. 下载工具
     1. wget: Mint系统自带
     2. uget: `sudo apt install -y uget`
+    3. aria2: 两种方法
+        1. `sudo apt install -y aria2`
+        1. Linux源码编译, [Github](https://github.com/aria2/aria2)
+
+            ```bash
+            # 下载源码包
+            wget https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz
+            # 解压
+            tar -xf aria2-1.35.0.tar.xz
+            # 安装依赖
+            sudo apt install nettle-dev libgmp-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config libunistring-dev lzma lzma-alone lzma-dev
+            # 运行以下命令来生成配置脚本和其他文件需要构建程序
+            autoreconf -i
+            # 建立aria2的最快方法是首先运行configure脚本
+            ./configure
+            # 配置完成后,运行make来编译程序 -j使用多线程进行编译
+            make -j 4
+            # 安装
+            sudo make install
+            ```
 
 22. 局域网端口侦测工具
     1. zenmap: `sudo apt install -y zenmap`
@@ -336,6 +356,7 @@ Thank you very much :
         tar -zxf tcping-linux-amd64-v0.1.1.tar.gz
         chmod +x tcping
         sudo mv tcping /usr/bin/
+        # tcping www.baidu.com 443
         ```
 
 23. 其他的东西
@@ -662,6 +683,9 @@ sudo apt install -y rar
 
 # install uget
 sudo apt install -y uget
+
+# install aria2
+sudo apt install -y aria2
 
 # install flameshot
 sudo apt install -y flameshot
