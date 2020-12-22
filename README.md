@@ -7,8 +7,8 @@ Thank you very much :
 
 <!-- 时间格式: %A %m月%d日 %H:%M:%S -->
 
-+ 搜狗拼音和wps还不支持Mint20版本,替代方案用谷歌拼音和自带的libreOffice
-+ deepin-terminal只兼容2.9版本
++ 搜狗拼音和wps已经支持Mint20版本啦:tada::tada:
++ deepin-terminal只兼容2.9版本:cupid:
 
 > LinuxMint 18.x, 19.x, 20.x
 
@@ -190,8 +190,8 @@ Thank you very much :
     2. wps:
         
         ```bash
-        wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9604/wps-office_11.1.0.9604_amd64.deb
-        sudo dpkg -i wps-office_11.1.0.9604_amd64.deb
+        wget -Nc https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9719/wps-office_11.1.0.9719_amd64.deb
+        sudo dpkg -i wps-office_11.1.0.9719_amd64.deb
         ```
 
 9. vpn
@@ -445,9 +445,10 @@ Thank you very much :
     1. sougoupinyin:
         
         ```bash
+        # Help - https://pinyin.sogou.com/linux/help.php
         # 依赖于Fcitx框架
-        wget -Nc http://cdn2.ime.sogou.com/dl/index/1571302197/sogoupinyin_2.3.1.0112_amd64.deb
-        sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
+        wget -Nc https://ime.sogoucdn.com/dl/index/1608303807/sogoupinyin_2.4.0.2905_amd64.deb
+        sudo dpkg -i sogoupinyin_2.4.0.2905_amd64.deb
         # 可能会有一些包没有安装，通过--fix-broken来解决冲突，并安装上sougoupinyin
         sudo apt-get --fix-broken -y install
         # 重启，我是重启了
