@@ -12,7 +12,7 @@ Thank you very much :
 
 > LinuxMint 18.x, 19.x, 20.x
 
-![marionxue's github stats](https://github-readme-stats.vercel.app/api?username=keke-cat&show_icons=true&theme=radical) 
+![marionxue's github stats](https://github-readme-stats.vercel.app/api?username=le-shi&show_icons=true&theme=radical) 
 
 # LinuxMint下工具的安装
 基于Apt的软件
