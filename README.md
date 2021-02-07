@@ -5,10 +5,21 @@ Thank you very much :
 | [**Linux发行版软件**](https://www.lulinux.com/archives/2787)
 | [**为Linux Mint设置为雅黑字体**](https://blog.csdn.net/wangrui1573/article/details/81973919)
 
+---
 <!-- 时间格式: %A %m月%d日 %H:%M:%S -->
+日历显示时间格式:
+
+```text
+时:分:秒 年-月-日 周
+%H:%M:%S %Y-%m-%d %A
+```
+
+---
 
 + 搜狗拼音和wps已经支持Mint20版本啦:tada::tada:
 + deepin-terminal只兼容2.9版本:cupid:
+
+---
 
 > LinuxMint 18.x, 19.x, 20.x
 
@@ -566,7 +577,12 @@ Thank you very much :
     10. 得到一个新的身份
        - Install: `sudo apt install rig` 
        - Run: `rig`
-
+    11. 显示由普通屏幕字符组成的大字
+       - Install: `sudo apt install figlet`
+       - Run: `figlet "Hello World"`
+    12. 彩虹字
+       - Install: `sudo apt install lolcat`
+       - Run: `echo "Hello World" | lolcat`
 
 ## 基于snap的软件
 
