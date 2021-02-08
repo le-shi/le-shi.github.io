@@ -16,6 +16,27 @@ Thank you very much :
 
 ---
 
+个性化配置的备份和还原:smiling_imp:
+
++ 个性化配置项:
+  + 键盘快捷键
+  + 面板设置
+  + 已安装的软件包列表
+  + 主题
+  + 字体
+  + 输入法设置
+  + 自定义环境变量(/etc/profile.d/lshi-env.sh)
+
++ 备份
+
+    Pending...
+
++ 还原
+
+    Pending...
+
+---
+
 + 搜狗拼音和wps已经支持Mint20版本啦:tada::tada:
 + deepin-terminal只兼容2.9版本:cupid:
 
@@ -91,9 +112,24 @@ Thank you very much :
         wget -qO- https://deepin-wine.i-m.dev/setup.sh | sudo sh
         ```
 
-    1. wine-微信: `sudo apt install -y deepin.com.wechat`
-    1. wine-TIM: `sudo apt install -y deepin.com.qq.office`
-    1. Tencent QQ
+    1. wine-微信:
+
+        ```bash
+        sudo apt install -y deepin.com.wechat
+        
+        设置键盘快捷键，自定义快捷键
+        先准备一个shell脚本，添加执行权限，内容如下:
+        #!/bin/sh
+        #在当前运行的应用中找到名为WeChat.exe的应用程序，并向它发送按键事件"ctrl+alt+W"
+        #WeChat的可执行文件名为WeChat.exe，如果是其它应用程序就修改成其它应用程序的可执行文件名, 应用名称大小写敏感, 一个字母都不能错!
+        xdotool key --window $(xdotool search --limit 1 --all --pid $(pgrep WeChat.exe)) "ctrl+alt+W"
+
+        快捷键指定命令: /绝对路径/脚本的名字
+        键盘绑定: Ctal+Alt+W
+        ```
+
+    2. wine-TIM: `sudo apt install -y deepin.com.qq.office`
+    3. Tencent QQ
         
         ```bash
         wget -Nc https://qd.myapp.com/myapp/qqteam/linuxQQ/linuxqq_2.0.0-b1-1024_amd64.deb
@@ -109,7 +145,7 @@ Thank you very much :
         sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
         ```
 
-    1. 深度终端: 
+    2. 深度终端: 
         
         ```bash
         # deepin-terminal 2.9.2
@@ -127,7 +163,7 @@ Thank you very much :
         # deepin-terminal 3.0以上版本依赖libc6 (>= 2.29)
         ```
 
-    1. electerm:
+    3. electerm:
        
        ```bash
        wget -Nc https://github.com/electerm/electerm/releases/download/v1.4.2/electerm-1.4.2-linux-amd64.deb
@@ -339,7 +375,7 @@ Thank you very much :
     2. uget: `sudo apt install -y uget`
     3. aria2: 两种方法
         1. `sudo apt install -y aria2`
-        1. Linux源码编译, [Github](https://github.com/aria2/aria2)
+        2. Linux源码编译, [Github](https://github.com/aria2/aria2)
 
             ```bash
             # 下载源码包
@@ -397,6 +433,7 @@ Thank you very much :
         sudo apt install -y flameshot
         设置系统快捷键，可取消显示托盘图标
         快捷键指定命令: '/usr/bin/flameshot gui'
+        键盘绑定: Alt+A
         ```
 
 24. ftp工具
