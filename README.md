@@ -35,6 +35,15 @@ Thank you very much :
 
     Pending...
 
+软件包的备份和还原:
+
+```bash
+# 保存系统中已存在的软件包完整列表
+sudo dpkg --get-selections > all_package.list
+# 还原已保存的软件包完整列表
+sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
+```
+
 ---
 
 + 搜狗拼音和wps已经支持Mint20版本啦:tada::tada:
@@ -55,7 +64,7 @@ Thank you very much :
 1. 浏览器， Chromium; Firefox; chrome
 1. 科学工具，shadowsocks; chrome插件[setupvpn]
 1. 文本编辑器， atom; vsCode; Unity
-1. wps， 自带的; wps
+1. wps， 自带的LibreOffice; wps
 1. vpn，openvpn; esayconnect
 1. pdf查看器， okular
 1. 远程工具，teamviewer
@@ -73,7 +82,7 @@ Thank you very much :
 1. ftp工具，FileZilla
 1. 连接windows，rdesktop
 1. 文件对比工具， meld(GUI); diff(command)
-1.  笔记， nixnote2（印象笔记客户端）
+1. 笔记， nixnote2（印象笔记客户端）
 1. 光盘刻录，Brasero
 1. 护眼，fluxgui
 1. 输入法，sougoupinyin, 谷歌拼音
@@ -171,7 +180,13 @@ Thank you very much :
        ```
 
 3. 终端 - 支持选中复制
-    1. terminator: `sudo apt install -y terminator`
+    1. terminator:
+
+        ```bash
+        sudo apt install -y terminator
+        设置为默认终端：首选项-首选应用程序-终端
+        选择刚刚安装的这个终端(红色的Logo)
+        ```
 
 4. 复古终端
     1. cool-retro-term:
@@ -234,6 +249,11 @@ Thank you very much :
 
 8. wps
     1. LibreOffice: Mint系统自带
+
+       ```diff
+       - 中文问题
+       ```
+
     2. wps:
         
         ```bash
@@ -856,4 +876,10 @@ git clone https://github.com/yaronn/blessed-contrib.git
 cd blessed-contrib
 npm install
 # node ./examples/dashboard.js
+```
+
+## 强迫症设置
+
+```bash
+1. 不显示桌面图标(默认会显示计算机，主目录): 首选项-桌面-桌面图标
 ```
