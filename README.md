@@ -53,10 +53,12 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 
 > LinuxMint 18.x, 19.x, 20.x
 
-![marionxue's github stats](https://github-readme-stats.vercel.app/api?username=le-shi&show_icons=true&theme=radical) 
+![marionxue's github stats](https://github-readme-stats.vercel.app/api?username=le-shi&show_icons=true&theme=radical)
 
-# LinuxMint下工具的安装
-基于Apt的软件
+## LinuxMint下工具的安装
+
+> 基于Apt的软件
+
 1. 聊天工具， 微信; TIM; Tencent QQ
 1. ssh工具，Remmina; deepin-terminal; electerm
 1. 终端， terminator
@@ -85,7 +87,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 1. 笔记， nixnote2（印象笔记客户端）
 1. 光盘刻录，Brasero
 1. 护眼，fluxgui
-1. 输入法，sougoupinyin, 谷歌拼音
+1. 输入法，sougoupinyin, 谷歌拼音, 百度输入法
 1. MD预览，typora
 1. 系统监视，conky
 1. 录屏，SimpleScreenRecorder
@@ -97,9 +99,12 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 1. 一些有趣的linux命令
 
 ---
-基于**snap**的软件(安装服务后需要重启才能使用)
-安装snap: sudo apt install snapd snapcraft
-安装snap商店: sudo snap install snap-store
+> 基于**snap**的软件(安装服务后需要重启才能使用)
+
+安装snap: `sudo apt install snapd snapcraft`
+
+安装snap商店: `sudo snap install snap-store`
+
 1. redis客户端: RedisDesktopManager
 1. git客户端: GitKraken
 
@@ -511,7 +516,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 
 30. 输入法
     1. sougoupinyin:
-        
+
         ```bash
         # Help - https://pinyin.sogou.com/linux/help.php
         # 依赖于Fcitx框架
@@ -522,15 +527,29 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 重启，我是重启了
         ```
 
-    2. 谷歌拼音: 
-        
+    2. 谷歌拼音:
+
         ```bash
         # 依赖于Fcitx框架
         sudo apt install -y fcitx-googlepinyin
         # 重启，我是重启了
         ```
+
+    3. 百度输入法:
+
+        ```bash
+        # 下载安装包
+        wget -Nc https://imeres.baidu.com/imeres/ime-res/guanwang/img/Ubuntu_Deepin-fcitx-baidupinyin-64.zip
+        # 解压
+        unzip Ubuntu_Deepin-fcitx-baidupinyin-64.zip
+        # 安装
+        sudo dpkg -i Ubuntu_Deepin-fcitx-baidupinyin-64/fcitx-baidupinyin.deb
+        # 重启，我是重启了
         
-        
+        # 候选框乱码问题
+        # 1. 使用命令: sudo killall fcitx
+        # 2. 注销重新登录
+        ```
 
 31. MD预览
     1. typora:
@@ -882,4 +901,5 @@ npm install
 
 ```bash
 1. 不显示桌面图标(默认会显示计算机，主目录): 首选项-桌面-桌面图标
+1. 禁用移动窗口的特殊键(默认是Alt): 首选项-窗口-行为-移动并调整窗口-窗口移动和调整大小的特殊键
 ```
