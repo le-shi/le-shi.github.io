@@ -520,11 +520,15 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         ```bash
         # Help - https://pinyin.sogou.com/linux/help.php
         # 依赖于Fcitx框架
-        wget -Nc https://ime.sogoucdn.com/dl/index/1608303807/sogoupinyin_2.4.0.2905_amd64.deb
-        sudo dpkg -i sogoupinyin_2.4.0.2905_amd64.deb
-        # 可能会有一些包没有安装，通过--fix-broken来解决冲突，并安装上sougoupinyin
+        wget -Nc https://ime.sogoucdn.com/dl/index/1612260778/sogoupinyin_2.4.0.3469_amd64.deb
+        sudo dpkg -i sogoupinyin_2.4.0.3469_amd64.deb
+        # 如果不能反配置，使用下面的命令
+        sudo dpkg --auto-deconfigure -i sogoupinyin_2.4.0.3469_amd64.deb
+        # 可能会有一些包没有安装，通过--fix-broken来解决冲突，并安装上sougoupinyin; 如果这一步解决不了，使用`fcitx -r`重新加载，再次执行上面的反配置命令，进行安装
         sudo apt-get --fix-broken -y install
-        # 重启，我是重启了
+        # 1. 安装后，需要重启加载fcitx配置；重启机器，我是重启了
+        # 2. 安装后，需要重启加载fcitx配置；不重启机器，重新加载配置文件 --这个好
+        fcitx -r
         ```
 
     2. 谷歌拼音:
