@@ -853,7 +853,12 @@ sudo apt install -y bashtop
 ## 安装这里记录的所有的有趣的命令
 
 ```bash
-# (这里使用-y免交互了，注意一下)
+# (-y免交互)
+
+# 向桌面发送通知,自定义提醒功能(结合定时任务crontab实现定时提醒)
+sudo apt install -y libnotify-bin
+# 使用: notify-send "标题" "内容"
+
 # 在终端开一辆火车
 sudo apt install -y sl
 
