@@ -59,44 +59,44 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 
 > 基于Apt的软件
 
-1. 聊天工具， 微信; TIM; Tencent QQ
-1. ssh工具，Remmina; deepin-terminal; electerm
-1. 终端， terminator
-1. 复古终端, cool-retro-term
-1. 浏览器， Chromium; Firefox; chrome
-1. 科学工具，shadowsocks; chrome插件[setupvpn]
-1. 文本编辑器， atom; vsCode; Unity
-1. wps， 自带的LibreOffice; wps
-1. vpn，openvpn; esayconnect
-1. pdf查看器， okular
-1. 远程工具，teamviewer
-1. py工具， pycharm; pip2; pip3; py2; py3
-1. go工具， go; liteIDE
-1. node工具， node,npm; vue-cli
-1. 开发工具箱，JetBrains ToolBox
-1. 版本控制客户端， git;gitkraken;svn;RapidSVN;kdesvn
-1. git仓库概览工具， onefetch
-1. 数据库客户端， dbeaver
-1. 打包工具， tar;zip
-1. 下载工具, wget, uget, aria2
-1. 局域网端口侦测工具, zenmap;tcping
-1. 其他的东西, 下拉式终端tilda;下拉GNOME终端guake; HTTP 协议文件共享服务Chfs; MAC主题包Cairo-dock; 截图工具~~Shutter~~, flameshot
-1. ftp工具，FileZilla
-1. 连接windows，rdesktop
-1. 文件对比工具， meld(GUI); diff(command)
-1. 笔记， nixnote2（印象笔记客户端）
-1. 光盘刻录，Brasero
-1. 护眼，fluxgui
-1. 输入法，sougoupinyin, 谷歌拼音, 百度输入法
-1. MD预览，typora
-1. 系统监视，conky
-1. 录屏，SimpleScreenRecorder
-1. wine
-1. 容器: docker
-1. 剪贴板管理器: copyq
-1. 多显示器使用不同壁纸: nitrogen
-1. 多功能top: bashtop
-1. 一些有趣的linux命令
+1. 聊天工具: 微信, TIM, Tencent QQ
+1. 远程ssh工具: Remmina, deepin-terminal, electerm
+9. 远程sftp工具: FileZilla
+1. 终端: terminator
+2. 复古终端: cool-retro-term
+3. 浏览器: Chromium, Firefox, Chrome, Brave
+4. 科学工具: shadowsocks, chrome插件[setupvpn]
+5. 文本编辑器: atom, vsCode, Unity
+6. wps: 自带的LibreOffice, wps
+7. vpn: openvpn, esayconnect
+8. pdf查看器: okular
+10. 远程工具: teamviewer
+11. py工具: pycharm, pip2, pip3, py2, py3
+12. go工具: go, liteIDE
+13. node工具: node, npm, vue-cli
+14. 开发工具箱: JetBrains ToolBox(jet全家桶)
+15. 版本控制客户端: git, gitkraken, svn, RapidSVN, kdesvn
+16. git仓库概览工具: onefetch
+17. 数据库客户端: dbeaver
+18. 打包工具: tar, zip
+19. 下载工具: wget, uget, aria2
+20. 局域网端口侦测工具: nmap, tcping
+21. 连接windows: rdesktop, krdc
+23. 文件对比工具: meld(GUI), diff(command)
+24. 笔记同步: nixnote2(印象笔记客户端), 坚果云
+25. 光盘刻录: Brasero
+26. 护眼: fluxgui
+27. 输入法: sougoupinyin, 谷歌拼音, 百度输入法
+28. MD预览: typora
+29. 系统监视: conky
+30. 录屏: SimpleScreenRecorder
+31. wine
+32. 容器: docker
+33. 剪贴板管理器: copyq
+34. 多显示器使用不同壁纸: nitrogen
+35. 多功能top: bashtop
+36. 其他的东西: 下拉式终端tilda, 下拉GNOME终端guake, HTTP 协议文件共享服务Chfs, MAC主题包Cairo-dock, 截图工具flameshot
+37. 一些有趣的linux命令
 
 ---
 > 基于**snap**的软件(安装服务后需要重启才能使用)
@@ -115,11 +115,13 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
   + 解决依赖: sudo apt-get --fix-broken -y install
 
 1. 聊天工具
-    1. TIM，微信: 需要安装[deepin-wine环境](https://github.com/wszqkzqk/deepin-wine-ubuntu);
-    然后去[Deepin-wine 容器的存档](https://gitee.com/wszqkzqk/deepin-wine-containers-for-ubuntu/);
+    1. TIM，微信
     下载对应的包
 
         ```bash
+        # 前置条件:
+        # 1. 需要安装[deepin-wine环境](https://github.com/wszqkzqk/deepin-wine-ubuntu)
+        # 2. 然后去[Deepin-wine 容器的存档](https://gitee.com/wszqkzqk/deepin-wine-containers-for-ubuntu/)
         git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
         cd deepin-wine-for-ubuntu
         yes | ./install.sh
@@ -211,6 +213,19 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         ```bash
         wget -Nc https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo dpkg -i google-chrome-stable_current_amd64.deb
+        ```
+    4. brave:
+    
+        ```bash
+        sudo apt install apt-transport-https curl
+        # 这里会涉及到网络问题，必要时需要科学上网
+        sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+        echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+        sudo apt update
+
+        sudo apt install brave-browser
         ```
 
 6. 科学工具
@@ -420,7 +435,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
             ```
 
 22. 局域网端口侦测工具
-    1. zenmap: `sudo apt install -y zenmap`
+    1. nmap: `sudo apt install -y nmap`
     2. tcping: 
 
         ```bash
@@ -478,6 +493,12 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         make
         sudo make install
         hash rdesktop
+        ```
+
+    2. krdc:
+    
+        ```bash
+        sudo apt install -y krdc
         ```
 
 26. 文件对比工具
@@ -590,7 +611,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     ```
 
 35. 容器: 
-   1. docker
+    1.  docker
       ```bash
       # 安装之前清理旧的版本
       sudo apt remove docker docker-engine docker.io containerd runc
@@ -606,7 +627,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
       ```
 
 36. 剪贴板管理器: 
-   2. copyq
+    1.  copyq
    
       ```bash
       sudo add-apt-repository ppa:hluk/copyq
@@ -615,7 +636,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
       ```
 
 37. 多显示器使用不同壁纸: 
-   3. nitrogen: `sudo apt install -y nitrogen`
+    1. nitrogen: `sudo apt install -y nitrogen`
 
 38. 多功能top: 
     1. bashtop
@@ -679,7 +700,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 
 ```bash
 # 1.配置字体-雅黑
-curl http://ftp-idc.pconline.com.cn/6bdd4de6de0e47545d1f0631a868eb73/pub/download/201010/yaheiFont_CHS.zip -O yaheiFont_CHS.zip
+curl -L https://github.com/le-shi/packages/raw/master/yaheiFont_CHS.zip -O yaheiFont_CHS.zip
 unzip yaheiFont_CHS.zip
 sudo mkdir /usr/share/fonts/msyh
 sudo cp msyh.ttf msyhbd.ttf /usr/share/fonts/msyh
@@ -689,7 +710,7 @@ sudo rm -f /usr/share/fonts/truetype/arphic/{ukai.ttc,uming.ttc}
 sudo apt update
 sudo apt upgrade -y
 # 3. 安装软件
-sudo apt install -y vim git zsh tree jq nmap iotop python-pip shellcheck
+sudo apt install -y vim git zsh tree jq nmap iotop python-pip shellcheck wget curl 
 # deepin-wine-ubuntu
 git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
 cd deepin-wine-for-ubuntu
@@ -914,5 +935,5 @@ npm install
 3. 窗口透明度(默认没有透明度): 系统设置-首选项-窗口-标题栏-动作-鼠标滚动时标题栏上的动作(选择: 调整不透明度)
 
 # --- 分割线 ---
-1. 输入法卡死,无法切换的解决办法: `fcitx -r`
+1. 输入法卡死,无法切换的解决办法: fcitx -r
 ```
