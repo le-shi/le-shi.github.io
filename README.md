@@ -35,6 +35,13 @@ Thank you very much :
 
     Pending...
 
++ 命令行修改系统配置
+
+    ```bash
+    # 设置游标大小(默认: 24)
+    gsettings set org.cinnamon.desktop.interface cursor-size 108
+    ```
+
 软件包的备份和还原:
 
 ```bash
@@ -60,43 +67,47 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 > 基于Apt的软件
 
 1. 聊天工具: 微信, TIM, Tencent QQ
-1. 远程ssh工具: Remmina, deepin-terminal, electerm
-9. 远程sftp工具: FileZilla
-1. 终端: terminator
-2. 复古终端: cool-retro-term
-3. 浏览器: Chromium, Firefox, Chrome, Brave
-4. 科学工具: shadowsocks, chrome插件[setupvpn]
-5. 文本编辑器: atom, vsCode, Unity
-6. wps: 自带的LibreOffice, wps
-7. vpn: openvpn, esayconnect
-8. pdf查看器: okular
-10. 远程工具: teamviewer
-11. py工具: pycharm, pip2, pip3, py2, py3
-12. go工具: go, liteIDE
-13. node工具: node, npm, vue-cli
-14. 开发工具箱: JetBrains ToolBox(jet全家桶)
-15. 版本控制客户端: git, gitkraken, svn, RapidSVN, kdesvn
-16. git仓库概览工具: onefetch
-17. 数据库客户端: dbeaver
-18. 打包工具: tar, zip
-19. 下载工具: wget, uget, aria2
-20. 局域网端口侦测工具: nmap, tcping
-21. 连接windows: rdesktop, krdc
-23. 文件对比工具: meld(GUI), diff(command)
-24. 笔记同步: nixnote2(印象笔记客户端), 坚果云
-25. 光盘刻录: Brasero
-26. 护眼: fluxgui
-27. 输入法: sougoupinyin, 谷歌拼音, 百度输入法
-28. MD预览: typora
-29. 系统监视: conky
-30. 录屏: SimpleScreenRecorder
-31. wine
-32. 容器: docker
-33. 剪贴板管理器: copyq
-34. 多显示器使用不同壁纸: nitrogen
-35. 多功能top: bashtop
-36. 其他的东西: 下拉式终端tilda, 下拉GNOME终端guake, HTTP 协议文件共享服务Chfs, MAC主题包Cairo-dock, 截图工具flameshot
-37. 一些有趣的linux命令
+2. 远程ssh工具: Remmina, deepin-terminal, electerm, Tabby, WindTerm
+3. 远程sftp: FileZilla
+4. 终端: terminator
+5. 复古终端: cool-retro-term
+6. 浏览器: Chromium, Firefox, Chrome, Brave
+7. 科学工具: shadowsocks, chrome插件[setupvpn]
+8. 文本编辑器: atom, vsCode, Unity
+9. wps: 自带的LibreOffice, wps
+10. vpn: openvpn, esayconnect
+11. pdf查看器: okular
+12. 远程工具: teamviewer, 向日葵
+13. 信息收取(email和rss): thunderbird
+14. py工具: pycharm, pip2, pip3, py2, py3
+15. go工具: go, liteIDE
+16. node工具: node, npm, vue-cli
+17. 开发工具箱: JetBrains ToolBox(jet全家桶)
+18. 版本控制客户端: git, gitkraken, svn, RapidSVN, kdesvn
+19. git仓库概览工具: onefetch
+20. 数据库客户端: dbeaver
+21. 打包工具: tar, zip
+22. 下载工具: wget, uget, aria2
+23. 局域网端口侦测工具: nmap, tcping
+24. 连接windows: rdesktop, krdc
+25. 文件对比工具: meld(GUI), diff(command)
+26. 笔记同步: nixnote2(印象笔记客户端), 坚果云
+27. 光盘刻录: Brasero
+28. 护眼: fluxgui
+29. 输入法: sougoupinyin, 谷歌拼音, 百度输入法
+30. MD预览: typora
+31. 系统监视: conky
+32. 录屏: SimpleScreenRecorder
+33. wine
+34. 容器: docker
+35. 剪贴板管理器: copyq
+36. 多显示器使用不同壁纸: nitrogen
+37. 多功能top: bashtop
+38. 系统字体: Hack
+39. shell: zsh
+40. 视频编辑器: OpenShot
+41. 其他的东西: 下拉式终端tilda, 下拉GNOME终端guake, HTTP协议文件共享服务Chfs, MAC主题包Cairo-dock, 截图工具flameshot, 磁盘使用分析baobab
+42. 一些有趣的linux命令
 
 ---
 > 基于**snap**的软件(安装服务后需要重启才能使用)
@@ -126,6 +137,9 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         cd deepin-wine-for-ubuntu
         yes | ./install.sh
         wget -qO- https://deepin-wine.i-m.dev/setup.sh | sudo sh
+
+        # 支持安装的软件列表
+        https://deepin-wine.i-m.dev/
         ```
 
     1. wine-微信:
@@ -185,6 +199,22 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
        wget -Nc https://github.com/electerm/electerm/releases/download/v1.4.2/electerm-1.4.2-linux-amd64.deb
        sudo dpkg -i electerm-1.4.2-linux-amd64.deb
        ```
+
+    4. Tabby:
+       
+       ```bash
+       wget --content-disposition https://packagecloud.io/eugeny/tabby/packages/ubuntu/focal/tabby-terminal_1.0.169_amd64.deb/download.deb
+       sudo dpkg -i tabby-terminal_1.0.169_amd64.deb
+       ```
+
+    5. [WindTerm](https://github.com/kingToolbox/WindTerm):
+       
+       ```bash
+       wget --content-disposition https://github.com/kingToolbox/WindTerm/releases/download/2.5.0/WindTerm_2.5.0_Linux_Portable_x86_64.tar.gz
+       tar -zxf WindTerm_2.5.0_Linux_Portable_x86_64.tar.gz
+       ```
+
+
 
 3. 终端 - 支持选中复制
     1. terminator:
@@ -298,6 +328,38 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         ```bash
         wget -Nc http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.deb
         sudo dpkg -i EasyConnect_x64.deb
+        # 安装好之后，点击图标打开 EasyConnect 没反应#
+        # 然后通过命令行运行: /usr/share/sangfor/EasyConnect/EasyConnect 提示: Harfbuzz version too old (1.3.1) ，看样子是版本问题导致的
+        # 有网友发现可以通过降级pango等依赖解决问题。错误信息提示Harfbuzz版本太旧了，实际上是因为pango版本太新了。需要做的不是升级Harfbuzz,而是降级pango。为了防止修改系统库带来的风险，直接将相关的so库文件解压到easyconnect同目录下即可。具体来说，涉及的so文件为： 
+        ldd EasyConnect | grep pango
+            libpangocairo-1.0.so.0 => /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0 (0x00007f9713518000)
+            libpango-1.0.so.0 => /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0 (0x00007f971337e000)
+            libpangoft2-1.0.so.0 => /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0 (0x00007f97116d8000)
+        
+        # 开始解决
+        # 下载：
+        wget https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/main/p/pango1.0/libpango-1.0-0_1.36.3-1ubuntu1_amd64.deb
+        wget https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/main/p/pango1.0/libpangocairo-1.0-0_1.36.3-1ubuntu1_amd64.deb
+        wget https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/main/p/pango1.0/libpangoft2-1.0-0_1.36.3-1ubuntu1_amd64.deb
+
+        mkdir pango/
+
+        # 解压
+        dpkg -X libpango-1.0-0_1.36.3-1ubuntu1_amd64.deb pango/
+        dpkg -X libpangocairo-1.0-0_1.36.3-1ubuntu1_amd64.deb pango/
+        dpkg -X libpangoft2-1.0-0_1.36.3-1ubuntu1_amd64.deb pango/
+
+        # 移动 so.0 文件到 EasyConnet 目录
+        sudo cp pango/usr/lib/x86_64-linux-gnu/*.so.0 /usr/share/sangfor/EasyConnect
+
+        # 现在的so库文件已经是从 EasyConnect 目录读取的了
+        ldd /usr/share/sangfor/EasyConnect/EasyConnect | grep pango
+            libpangocairo-1.0.so.0 => /usr/share/sangfor/EasyConnect/libpangocairo-1.0.so.0 (0x00007fb5577a5000)
+            libpango-1.0.so.0 => /usr/share/sangfor/EasyConnect/libpango-1.0.so.0 (0x00007fb55740d000)
+            libpangoft2-1.0.so.0 => /usr/share/sangfor/EasyConnect/libpangoft2-1.0.so.0 (0x00007fb555567000)
+
+        # 再次运行 /usr/share/sangfor/EasyConnect/EasyConnect 就可以了，也可以通过图标点击打开了
+
         #rpm的 http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.rpm
         ```
 
@@ -313,7 +375,38 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt-get --fix-broken -y install
         ```
 
-12. py工具,py环境
+    2. 向日葵
+    
+        ```bash
+        # https://blog.csdn.net/weixin_43746424/article/details/119877044
+        # 下载
+        wget -Nc https://down.oray.com/sunlogin/linux/sunloginclient-11.0.0.36662-amd64.deb
+        # 因为直接安装会因为系统版本问题失败，所以在安装前处理一下操作系统版本信息，安装好之后还原回来
+        # 1. 备份相关文件
+        sudo mv -v /etc/os-release /etc/os-release.bak
+        sudo mv -v /etc/issue /etc/issue.bak
+        sudo mv -v /etc/upstream-release /etc/upstream-release.bak
+        # 2. 修改 issue 文件，指定版本
+        echo "Ubuntu 20.04 LTS \n \l" | sudo tee /etc/issue
+        # 安装
+        sudo dpkg -i sunloginclient-11.0.0.36662-amd64.deb
+        # 3. 还原备份的文件
+        sudo mv -v /etc/os-release.bak /etc/os-release
+        sudo mv -v /etc/issue.bak /etc/issue
+        sudo mv -v /etc/upstream-release.bak /etc/upstream-release
+        # 通过菜单-找到向日葵图标-打开使用
+        ```
+
+12. 信息收取(email和rss):
+    1. thunderbird
+    
+    ```bash
+    # Mint系统自带
+    sudo apt install thunderbird
+    ```
+
+
+13. py工具,py环境
     1. pycharm：
     
         ```bash
@@ -327,7 +420,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     4. py3: Mint系统自带, python3 -V
     5. pip3: `sudo apt install -y python3-pip`， pip3 -V
 
-13. go工具: 
+14. go工具: 
     1. go
     
         ```bash
@@ -344,7 +437,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         ln -s /usr/local/liteide/bin/liteide ~/桌面/
         ```
 
-14. node工具:
+15. node工具:
     1. node,npm
         
         ```bash
@@ -358,7 +451,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     2. vue-cli: `cnpm install -g vue-cli`
 
 
-15. 开发工具箱:
+16. 开发工具箱:
     1. JetBrains ToolBox `[Pycharm, IDEA, GoLand, DataGrip, WebStorm]`
         
         ```bash
@@ -366,7 +459,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo tar -zxf jetbrains-toolbox-1.15.5796.tar.gz -C /usr/local/share/
         ```
 
-16. JetBrains公司的CI/CD工具
+17. JetBrains公司的CI/CD工具
     1. TeamCity:
         
         ```bash
@@ -374,7 +467,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo tar -zxf TeamCity-2019.1.4.tar.gz -C /usr/local/share/
         ```
 
-17. 版本控制客户端
+18. 版本控制客户端
     1. git: `sudo apt install -y git`
     2. gitkraken:
         
@@ -387,7 +480,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     4. RapidSVN: `sudo apt install -y rapidsvn`
     5. kdesvn: `sudo apt install -y kdesvn`
 
-18. git仓库概览工具
+19. git仓库概览工具
     1. onefetch
         
         ```bash
@@ -397,7 +490,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         ```
 
 
-19. 数据库客户端
+20. 数据库客户端
     1. dbeaver:
         
         ```bash
@@ -405,12 +498,12 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo dpkg -i dbeaver-ce_7.1.3_amd64.deb
         ```
 
-20. 打包工具
+21. 打包工具
     1. tar: Mint系统自带
     2. zip: Mint系统自带
     3. rar: `sudo apt install -y rar`
 
-21. 下载工具
+22. 下载工具
     1. wget: Mint系统自带
     2. uget: `sudo apt install -y uget`
     3. aria2: 两种方法
@@ -434,7 +527,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
             sudo make install
             ```
 
-22. 局域网端口侦测工具
+23. 局域网端口侦测工具
     1. nmap: `sudo apt install -y nmap`
     2. tcping: 
 
@@ -446,7 +539,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # tcping www.baidu.com 443
         ```
 
-23. 其他的东西
+24. 其他的东西
     1. 下拉式终端 tilda: `sudo apt install -y tilda`
     2. 下拉式GNOME终端: `sudo apt install guake`
     3. HTTP 协议文件共享服务 Chfs:
@@ -471,15 +564,24 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         
         ```bash
         sudo apt install -y flameshot
-        设置系统快捷键，可取消显示托盘图标
+        # 取消显示托盘图标
+        flameshot config
+        # 设置系统快捷键：菜单-键盘-快捷键-添加自定义快捷键
+        定义快捷键名称：flameshot-截图
         快捷键指定命令: '/usr/bin/flameshot gui'
-        键盘绑定: Alt+A
+        添加后，设置键盘绑定: Alt+A
         ```
 
-24. ftp工具
+    6. 磁盘使用分析
+    
+        ```bash
+        sudo apt install -y baobab
+        ```       
+
+25. sftp工具
     1. FileZilla: `sudo apt install -y filezilla`
 
-25. 连接windows
+26. 连接windows
     1. rdesktop: *either-or*
         apt(1.8.3-2build1): `sudo apt install -y rdesktop`
         source(1.9.0):
@@ -501,12 +603,12 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y krdc
         ```
 
-26. 文件对比工具
+27. 文件对比工具
     1. meld:
     `sudo apt install -y meld`
     1. diff: 系统自带
 
-27. 笔记
+28. 笔记
     1. nixnote2:
         
         ```bash
@@ -523,10 +625,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 然后关闭登录框，再从'工具'中的同步进入，这个时候就会看到授权提示了。
         ```
 
-28. 光盘刻录
+29. 光盘刻录
     1. Brasero: `sudo apt install -y brasero`
 
-29. 护眼
+30. 护眼
     1. fluxgui:
         
         ```bash
@@ -535,7 +637,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y fluxgui
         ```
 
-30. 输入法
+31. 输入法
     1. sougoupinyin:
 
         ```bash
@@ -576,7 +678,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 2. 注销重新登录
         ```
 
-31. MD预览
+32. MD预览
     1. typora:
         
         ```bash
@@ -586,10 +688,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y typora
         ```
 
-32. 系统监视
+33. 系统监视
     1. [conky](https://github.com/brndnmtthws/conky/) | [configure](https://github.com/erikdubois/Aureola) : `sudo apt install -y hddtemp curl lm-sensors conky-all conky`
     
-33. 录屏
+34. 录屏
     1. SimpleScreenRecorder
         
         ```bash
@@ -598,7 +700,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y simplescreenrecorder
         ```
 
-34. wine
+35. wine
     
     ```bash
     sudo dpkg --add-architecture i386
@@ -610,7 +712,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     #运行"winecfg", 你至少需要运行一次winecfg来设置wine的目录和硬件
     ```
 
-35. 容器: 
+36. 容器: 
     1.  docker
       ```bash
       # 安装之前清理旧的版本
@@ -626,7 +728,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
       sudo apt install -y docker-ce docker-ce-cli containerd.io
       ```
 
-36. 剪贴板管理器: 
+37. 剪贴板管理器: 
     1.  copyq
    
       ```bash
@@ -635,10 +737,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
       sudo apt install -y copyq
       ```
 
-37. 多显示器使用不同壁纸: 
+38. 多显示器使用不同壁纸: 
     1. nitrogen: `sudo apt install -y nitrogen`
 
-38. 多功能top: 
+39. 多功能top: 
     1. bashtop
 
         ```bash
@@ -647,7 +749,37 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y bashtop
         ```
 
-39. 一些有趣的linux命令
+40. 系统字体:
+   1. Hack
+   
+    ```bash
+    sudo apt install -y fonts-hack-ttf
+    # 清理并重新加载字体缓存和索引，输出详情
+    fc-cache -f -v
+    # 查看字体列表
+    fc-list | grep "Hack"
+    ```
+
+41. shell:
+   2. zsh
+
+    ```bash
+    # 安装zsh
+    sudo apt install -y zsh
+    # 安装主题包
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+
+42. 视频编辑器: OpenShot
+    
+    ```bash
+    sudo add-apt-repository ppa:openshot.developers/ppa
+    sudo apt update
+    sudo apt install openshot-qt python3-openshot
+    ```
+
+
+43. 一些有趣的linux命令
     1. 在终端开一辆火车
        - Install: `sudo apt install sl`
        - Run: `sl` or `sl -F`
@@ -672,16 +804,19 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     8. Toilet
        - Install: `sudo apt install toilet` 
        - Run: `toilet "this is good"` 
-    9. 那个牛说什么？
+    9. 那个牛说什么？ -字符牛
        - Install: `sudo apt install cowsay` 
        - Run: `cowsay "this is good"`
-    10. 得到一个新的身份
+    10. 那个牛说什么？ -图形牛
+       - Install: `sudo apt install xcowsay` 
+       - Run: `xcowsay -t 1 "this is good"`
+    11. 得到一个新的身份
        - Install: `sudo apt install rig` 
        - Run: `rig`
-    11. 显示由普通屏幕字符组成的大字
+    12. 显示由普通屏幕字符组成的大字
        - Install: `sudo apt install figlet`
        - Run: `figlet "Hello World"`
-    12. 彩虹字
+    13. 彩虹字
        - Install: `sudo apt install lolcat`
        - Run: `echo "Hello World" | lolcat`
 
@@ -863,6 +998,11 @@ sudo apt install -y copyq
 
 # nitrogen
 sudo apt install -y nitrogen
+
+# OpenShot
+sudo add-apt-repository ppa:openshot.developers/ppa
+sudo apt update
+sudo apt install -y openshot-qt python3-openshot
 
 # bashtop
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
