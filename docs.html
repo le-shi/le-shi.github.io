@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Linux Mint 与 Windows 11 系统配置文档。">
+  <meta name="theme-color" content="#101512">
+  <title>Field Guide / Documentation</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Azeret+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="docs-page">
+  <a class="skip-link" href="#document-content">跳到文档正文</a>
+  <header class="site-header docs-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>LE-SHI<span class="brand-slash">/</span>FIELD GUIDE</span></a>
+    <div class="doc-switcher" aria-label="切换文档">
+      <a href="docs.html?doc=linux" data-doc-link="linux">LINUX</a>
+      <a href="docs.html?doc=windows" data-doc-link="windows">WINDOWS</a>
+    </div>
+    <div class="header-actions">
+      <button class="icon-button search-trigger" type="button" aria-label="搜索文档" title="搜索文档">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+      </button>
+      <button class="icon-button theme-toggle" type="button" aria-label="切换深浅主题" title="切换主题">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="docs-shell">
+    <aside class="docs-sidebar" aria-label="文档目录">
+      <div class="sidebar-head">
+        <span class="sidebar-platform" id="sidebar-platform">LOADING</span>
+        <strong id="sidebar-title">正在载入文档</strong>
+        <small id="sidebar-file">—</small>
+      </div>
+      <nav id="table-of-contents" class="table-of-contents"></nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> SOURCE SYNCHRONIZED</div>
+    </aside>
+
+    <main class="document-main">
+      <div class="document-toolbar">
+        <button class="toc-mobile-trigger" type="button" aria-expanded="false" aria-controls="table-of-contents">目录</button>
+        <span id="reading-progress-label">READING PROGRESS 0%</span>
+        <div class="reading-track"><span id="reading-progress"></span></div>
+        <a id="source-link" href="#">VIEW SOURCE ↗</a>
+      </div>
+      <article id="document-content" class="markdown-body" aria-live="polite">
+        <div class="loading-state"><span></span><p>正在读取知识库…</p></div>
+      </article>
+    </main>
+  </div>
+
+  <dialog class="search-dialog" id="search-dialog">
+    <form method="dialog" class="search-shell">
+      <div class="search-head">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <input id="search-input" type="search" placeholder="搜索当前文档…" autocomplete="off" aria-label="搜索当前文档">
+        <button value="cancel" aria-label="关闭搜索">ESC</button>
+      </div>
+      <div id="search-results" class="search-results"><p>输入关键词开始搜索</p></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">命令已复制</div>
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>

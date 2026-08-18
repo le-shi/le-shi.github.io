@@ -67,47 +67,50 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 > 基于Apt的软件
 
 1. 聊天工具: 微信, TIM, Tencent QQ
-2. 远程ssh工具: Remmina, deepin-terminal, electerm, Tabby, WindTerm
+2. 远程ssh工具: Remmina(可以保存windows连接), deepin-terminal, electerm, Tabby, WindTerm
 3. 远程sftp: FileZilla
-4. 终端: terminator
-5. 复古终端: cool-retro-term
-6. 浏览器: Chromium, Firefox, Chrome, Brave
-7. 科学工具: shadowsocks, chrome插件[setupvpn]
-8. 文本编辑器: atom, vsCode, Unity
-9. wps: 自带的LibreOffice, wps
-10. vpn: openvpn, esayconnect
-11. pdf查看器: okular
-12. 远程工具: teamviewer, 向日葵
-13. 信息收取(email和rss): thunderbird
-14. py工具: pycharm, pip2, pip3, py2, py3
-15. go工具: go, liteIDE
-16. node工具: node, npm, vue-cli
-17. 开发工具箱: JetBrains ToolBox(jet全家桶)
-18. 版本控制客户端: git, gitkraken, svn, RapidSVN, kdesvn
-19. git仓库概览工具: onefetch
-20. 数据库客户端: dbeaver
-21. 打包工具: tar, zip
-22. 下载工具: wget, uget, aria2
-23. 局域网端口侦测工具: nmap, tcping
-24. 连接windows: rdesktop, krdc
-25. 文件对比工具: meld(GUI), diff(command)
-26. 笔记同步: nixnote2(印象笔记客户端), 坚果云
-27. 光盘刻录: Brasero
-28. 护眼: fluxgui
-29. 输入法: sougoupinyin, 谷歌拼音, 百度输入法
-30. MD预览: typora
-31. 系统监视: conky
-32. 录屏: SimpleScreenRecorder
-33. wine
-34. 容器: docker
-35. 剪贴板管理器: copyq
-36. 多显示器使用不同壁纸: nitrogen
-37. 多功能top: bashtop
-38. 系统字体: Hack
-39. shell: zsh
-40. 视频编辑器: OpenShot
-41. 其他的东西: 下拉式终端tilda, 下拉GNOME终端guake, HTTP协议文件共享服务Chfs, MAC主题包Cairo-dock, 截图工具flameshot, 磁盘使用分析baobab
-42. 一些有趣的linux命令
+4. 远程桌面: xrdp
+5. 终端: terminator
+6. 复古终端: cool-retro-term
+7. 浏览器: Chromium, Firefox, Chrome, Brave
+8. 科学工具: shadowsocks, chrome插件[setupvpn]
+9. 文本编辑器: atom, vsCode, Unity
+10. 白板: xournalpp++
+11. wps: 自带的LibreOffice, wps
+12. vpn: openvpn, esayconnect
+13. pdf查看器: okular
+14. 远程工具: teamviewer, 向日葵
+15. 信息收取(email和rss): thunderbird
+16. py工具: pycharm, pip2, pip3, py2, py3
+17. go工具: go, liteIDE
+18. node工具: node, npm, vue-cli
+19. 开发工具箱: JetBrains ToolBox(jet全家桶)
+20. 版本控制客户端: git, gitkraken, svn, RapidSVN, kdesvn
+21. git仓库概览工具: onefetch
+22. 数据库客户端: dbeaver
+23. 打包工具: tar, zip
+24. 下载工具: wget, uget, aria2
+25. 局域网端口侦测工具: nmap, tcping
+26. 连接windows: rdesktop, krdc
+27. 文件对比工具: meld(GUI), diff(command)
+28. 笔记同步: nixnote2(印象笔记客户端), 坚果云
+29. 光盘刻录: Brasero
+30. 护眼: fluxgui
+31. 输入法: sougoupinyin, 谷歌拼音, 百度输入法
+32. MD预览: typora
+33. 系统监视: conky
+34. 录屏: SimpleScreenRecorder
+35. wine
+36. 容器: docker
+37. 剪贴板管理器: copyq
+38. 多显示器使用不同壁纸: nitrogen
+39. 多功能top: bashtop
+40. 系统字体: Hack
+41. shell: zsh
+42. 视频编辑器: OpenShot
+43. 其他的东西: 下拉式终端tilda, 下拉GNOME终端guake, HTTP协议文件共享服务Chfs, MAC主题包Cairo-dock, 截图工具flameshot, 磁盘使用分析baobab
+44. 一些有趣的linux命令
+45. 虚拟机: VMware
 
 ---
 > 基于**snap**的软件(安装服务后需要重启才能使用)
@@ -145,8 +148,13 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     1. wine-微信:
 
         ```bash
-        sudo apt install -y deepin.com.wechat
+        # version: 
+        # sudo apt install -y deepin.com.wechat
+        # version: 3.4.0.38deepin16(deepin-wine6) https://com-store-packages.uniontech.com/appstore/pool/appstore/c/com.qq.weixin.deepin/com.qq.weixin.deepin_3.4.0.38deepin16_i386.deb
+        # version: 3.7.0.30deepin13(deepin-wine6) https://com-store-packages.uniontech.com/appstore/pool/appstore/c/com.qq.weixin.deepin/com.qq.weixin.deepin_3.7.0.30deepin13_i386.deb 目前有问题
+        sudo apt install -y com.qq.weixin.deepin
         
+        sudo apt install xdotool
         设置键盘快捷键，自定义快捷键
         先准备一个shell脚本，添加执行权限，内容如下:
         #!/bin/sh
@@ -166,6 +174,13 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo dpkg -i linuxqq_2.0.0-b1-1024_amd64.deb
         ```
 
+    4. 腾讯会议:
+
+        ```bash
+        wget -Nc https://updatecdn.meeting.qq.com/cos/249fc9a44733d846162296934bbf52fa/TencentMeeting_0300000000_3.10.0.401_x86_64_default.publish.deb
+        sudo dpkg -i TencentMeeting_0300000000_3.10.0.401_x86_64_default.publish.deb
+        ```
+
 2. ssh工具
     1. Remmina:
         
@@ -173,6 +188,12 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
         sudo apt update
         sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
+        ```
+
+        Usage
+        ```
+        提供了 RDP、VNC、XDMCP、SSH 等远程连接协议的支持
+        启动软件后，有可视化界面，可以保存 ssh rdp 信息，方便下次快速连接
         ```
 
     2. 深度终端: 
@@ -212,6 +233,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
        ```bash
        wget --content-disposition https://github.com/kingToolbox/WindTerm/releases/download/2.5.0/WindTerm_2.5.0_Linux_Portable_x86_64.tar.gz
        tar -zxf WindTerm_2.5.0_Linux_Portable_x86_64.tar.gz
+       # 去掉 自动锁定 -- 进入会话-首选项-设置,修改锁屏超时为0
+       sed -i 's/"application.lockScreenTimeout" : 30/"application.lockScreenTimeout" : 0/g' ~/.wind/profiles/default.v10/user.config
+       # 去掉 主密码(修改此配置需要重启，并且之前存储的密码需要重新键入 --次次要键入)
+       sed -i 's/"application.masterPassword" : true/"application.masterPassword" : false/g' ~/.wind/profiles/default.v10/user.config
        ```
 
 
@@ -288,7 +313,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         ```
 
     3. Unity:
-        
+
         ```bash
         wget -Nc https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.AppImage
         chmod +x UnityHubSetup.AppImage
@@ -296,8 +321,17 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 启动 Unity Hub 后，它会要求你使用 Unity ID 登录（或注册）以激活许可证。
         # 使用 Unity ID 登录后，进入 “Installs” 选项（如上图所示）并添加所需的版本/组件。
         ```
+8. 白板
+   1. xournalpp++
 
-8. wps
+        ```bash
+        wget -Nc https://github.com/xournalpp/xournalpp/releases/download/v1.1.3/xournalpp-1.1.3-Ubuntu-focal-x86_64.deb
+        sudo apt install -y libportaudiocpp0
+        sudo dpkg -i xournalpp-1.1.3-Ubuntu-focal-x86_64.deb
+        ```
+
+
+9. wps
     1. LibreOffice: Mint系统自带
 
        ```diff
@@ -311,8 +345,8 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo dpkg -i wps-office_11.1.0.9719_amd64.deb
         ```
 
-9. vpn
-    1. openvpn: [官网下载客户端](https://www.techspot.com/downloads/5182-openvpn.html)
+10. vpn
+    1. openvpn(server?): [官网下载客户端](https://www.techspot.com/downloads/5182-openvpn.html)
     
         ```bash
         wget -Nc https://files02.tchspt.com/storage2/temp/openvpn-2.4.7.tar.gz
@@ -363,10 +397,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         #rpm的 http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_01/EasyConnect_x64.rpm
         ```
 
-10. pdf查看器
+11. pdf查看器
     1. okular: `sudo apt install -y okular`
 
-11. 远程工具
+12. 远程工具
     1. teamviewer:
     
         ```bash
@@ -397,7 +431,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 通过菜单-找到向日葵图标-打开使用
         ```
 
-12. 信息收取(email和rss):
+13. 信息收取(email和rss):
     1. thunderbird
     
     ```bash
@@ -504,28 +538,32 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     3. rar: `sudo apt install -y rar`
 
 22. 下载工具
-    1. wget: Mint系统自带
-    2. uget: `sudo apt install -y uget`
-    3. aria2: 两种方法
-        1. `sudo apt install -y aria2`
-        2. Linux源码编译, [Github](https://github.com/aria2/aria2)
+    1. wget: http
+       - Mint系统自带
+    2. uget: http
+       - `sudo apt install -y uget`
+    3. aria2: http,ftp,bittorrent(bt)
+        - 两种方法
+          1. `sudo apt install -y aria2`
+          2. Linux源码编译, [Github](https://github.com/aria2/aria2)
 
-            ```bash
-            # 下载源码包
-            wget https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz
-            # 解压
-            tar -xf aria2-1.35.0.tar.xz
-            # 安装依赖
-            sudo apt install nettle-dev libgmp-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config libunistring-dev lzma lzma-alone lzma-dev
-            # 运行以下命令来生成配置脚本和其他文件需要构建程序
-            autoreconf -i
-            # 建立aria2的最快方法是首先运行configure脚本
-            ./configure
-            # 配置完成后,运行make来编译程序 -j使用多线程进行编译
-            make -j 4
-            # 安装
-            sudo make install
-            ```
+                ```bash
+                # 下载源码包
+                wget https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz
+                # 解压
+                tar -xf aria2-1.35.0.tar.xz
+                # 安装依赖
+                sudo apt install nettle-dev libgmp-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config libunistring-dev lzma lzma-alone lzma-dev
+                # 运行以下命令来生成配置脚本和其他文件需要构建程序
+                autoreconf -i
+                # 建立aria2的最快方法是首先运行configure脚本
+                ./configure
+                # 配置完成后,运行make来编译程序 -j使用多线程进行编译
+                make -j 4
+                # 安装
+                sudo make install
+                ```
+        - 使用: `aria2c 'magnet:?xt=urn:btih:0f0d1df182a55ada3d7c86bb40260d01586f1ef6&dn=zh-cn_windows_10_business_editions_version_22h2_updated_feb_2023_x64_dvd_995f5ea6&xl=5973727232' -o windows_10_business_editions_version_22h2_updated_feb_2023_x64_dvd_995f5ea6.dvd`
 
 23. 局域网端口侦测工具
     1. nmap: `sudo apt install -y nmap`
@@ -581,7 +619,20 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
 25. sftp工具
     1. FileZilla: `sudo apt install -y filezilla`
 
-26. 连接windows
+26. 远程桌面
+    1.  xrdp:
+        ```bash
+        # 安装 xrdp
+        sudo apt install -y xrdp
+        # 将 xrdp 用户加入 ssl-cert 组
+        sudo adduser xrdp ssl-cert
+        # 解决 连接闪退 的问题
+        echo "gnome-session" > ~/.xsession
+        # 解决 导致连接数量达到上限 的问题
+        sed -i 's/KillDisconnected=false/KillDisconnected=true/g' /etc/xrdp/sesman.ini
+        ```
+
+27. 连接windows
     1. rdesktop: *either-or*
         apt(1.8.3-2build1): `sudo apt install -y rdesktop`
         source(1.9.0):
@@ -597,18 +648,23 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         hash rdesktop
         ```
 
+        Usage
+        ```bash
+        rdesktop -u administrator -p password -g 1024*720 192.168.2.100
+        ```
+
     2. krdc:
     
         ```bash
         sudo apt install -y krdc
         ```
 
-27. 文件对比工具
+28. 文件对比工具
     1. meld:
     `sudo apt install -y meld`
-    1. diff: 系统自带
+    2. diff: 系统自带
 
-28. 笔记
+29. 笔记
     1. nixnote2:
         
         ```bash
@@ -625,10 +681,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 然后关闭登录框，再从'工具'中的同步进入，这个时候就会看到授权提示了。
         ```
 
-29. 光盘刻录
+30. 光盘刻录
     1. Brasero: `sudo apt install -y brasero`
 
-30. 护眼
+31. 护眼
     1. fluxgui:
         
         ```bash
@@ -637,7 +693,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y fluxgui
         ```
 
-31. 输入法
+32. 输入法
     1. sougoupinyin:
 
         ```bash
@@ -654,7 +710,19 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         fcitx -r
         ```
 
-    2. 谷歌拼音:
+    2. sogoupinyin:
+
+        ```bash
+        # Help - https://pinyin.sogou.com/linux/help.php
+        # 依赖于Fcitx框架
+        wget -Nc https://ime.sogouimecdn.com/202210311158/4b9f1dafa161afcb7b416767ee9cd59c/dl/gzindex/1656597217/sogoupinyin_4.0.1.2800_x86_64.deb
+        sudo dpkg -i sogoupinyin_4.0.1.2800_x86_64.deb
+        # 1. 安装后，需要重启加载fcitx配置；重启机器，我是重启了
+        # 2. 安装后，需要重启加载fcitx配置；不重启机器，重新加载配置文件 --这个好
+        fcitx -r
+        ```
+
+    3. 谷歌拼音:
 
         ```bash
         # 依赖于Fcitx框架
@@ -662,7 +730,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 重启，我是重启了
         ```
 
-    3. 百度输入法:
+    4. 百度输入法:
 
         ```bash
         # 下载安装包
@@ -678,7 +746,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         # 2. 注销重新登录
         ```
 
-32. MD预览
+33. MD预览
     1. typora:
         
         ```bash
@@ -688,10 +756,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y typora
         ```
 
-33. 系统监视
+34. 系统监视
     1. [conky](https://github.com/brndnmtthws/conky/) | [configure](https://github.com/erikdubois/Aureola) : `sudo apt install -y hddtemp curl lm-sensors conky-all conky`
     
-34. 录屏
+35. 录屏
     1. SimpleScreenRecorder
         
         ```bash
@@ -700,7 +768,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y simplescreenrecorder
         ```
 
-35. wine
+36. wine
     
     ```bash
     sudo dpkg --add-architecture i386
@@ -710,9 +778,15 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     sudo apt update
     sudo apt install --install-recommends winehq-stable winbind
     #运行"winecfg", 你至少需要运行一次winecfg来设置wine的目录和硬件
+    # 模拟32位
+    WINEARCH=win32 WINEPREFIX=~/clean_win32 winecfg
+    # 64位
+    WINEPREFIX=~/clean_win64 winecfg
+    # 更新wineprefix目录
+    wineboot -u
     ```
 
-36. 容器: 
+37. 容器: 
     1.  docker
       ```bash
       # 安装之前清理旧的版本
@@ -728,7 +802,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
       sudo apt install -y docker-ce docker-ce-cli containerd.io
       ```
 
-37. 剪贴板管理器: 
+38. 剪贴板管理器: 
     1.  copyq
    
       ```bash
@@ -737,10 +811,10 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
       sudo apt install -y copyq
       ```
 
-38. 多显示器使用不同壁纸: 
+39. 多显示器使用不同壁纸: 
     1. nitrogen: `sudo apt install -y nitrogen`
 
-39. 多功能top: 
+40. 多功能top: 
     1. bashtop
 
         ```bash
@@ -749,7 +823,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
         sudo apt install -y bashtop
         ```
 
-40. 系统字体:
+41. 系统字体:
    1. Hack
    
     ```bash
@@ -760,8 +834,8 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     fc-list | grep "Hack"
     ```
 
-41. shell:
-   2. zsh
+42. shell:
+   1. zsh
 
     ```bash
     # 安装zsh
@@ -770,7 +844,7 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
 
-42. 视频编辑器: OpenShot
+43. 视频编辑器: OpenShot
     
     ```bash
     sudo add-apt-repository ppa:openshot.developers/ppa
@@ -819,6 +893,31 @@ sudo dpkg --set-selections all_package.list && sudo apt-get dselect-upgrade
     13. 彩虹字
        - Install: `sudo apt install lolcat`
        - Run: `echo "Hello World" | lolcat`
+
+44. 虚拟机: VMware
+
+    ```bash
+    # 下载
+    wget -Nc https://download3.vmware.com/software/WKST-1700-LX/VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+    # 添加执行权限
+    chmod +x VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+    # 执行安装程序
+    sudo ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+
+    # Vmware Workstation Pro 17 激活码
+    JU090-6039P-08409-8J0QH-2YR7F
+    4A4RR-813DK-M81A9-4U35H-06KND
+    NZ4RR-FTK5H-H81C1-Q30QH-1V2LA
+    4Y09U-AJK97-089Z0-A3054-83KLA
+    4C21U-2KK9Q-M8130-4V2QH-CF810
+    MC60H-DWHD5-H80U9-6V85M-8280D
+    ZA30U-DXF84-4850Q-UMMXZ-W6K8F
+    AC590-2XW97-48EFZ-TZPQE-MYHEA
+    YF39K-DLFE5-H856Z-6NWZE-XQ2XD
+    AC15R-FNZ16-H8DWQ-WFPNV-M28E2
+    CZ1J8-A0D82-489LZ-ZMZQT-P3KX6
+    YA11K-6YE8H-H89ZZ-EXM59-Y6AR0
+    ```
 
 ## 基于snap的软件
 

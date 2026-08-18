@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="le-shi 的跨平台系统配置、软件安装与开发环境知识库。">
+  <meta name="theme-color" content="#101512">
+  <title>Le Shi / System Field Guide</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Azeret+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="home-page">
+  <!--
+  THESIS: A personal systems field guide presented as a live cross-platform control surface, refusing the generic blog-card homepage.
+  OWN-WORLD: Ink-black console surfaces, mineral green and electric blue platform fields, crisp seams, oversized condensed labels, and command-line annotations.
+  STORY: Visitors identify the platform they need, understand the repository as a maintained field guide, and enter the corresponding source document.
+  FIRST VIEWPORT: Fixed utility rail, large split platform stage, central system dial, and direct Linux/Windows actions visible without scrolling.
+  FORM: Cross-platform operations console; chosen from the approved OS control-center direction; seed 6207c94a.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="返回首页">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>LE-SHI<span class="brand-slash">/</span>FIELD GUIDE</span>
+    </a>
+    <div class="header-actions">
+      <span class="system-status"><span></span> KNOWLEDGE BASE ONLINE</span>
+      <button class="icon-button theme-toggle" type="button" aria-label="切换深浅主题" title="切换主题">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+      </button>
+      <a class="icon-button" href="https://github.com/le-shi/le-shi.github.io" aria-label="在 GitHub 查看仓库" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 6.82a9.5 9.5 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-index">PERSONAL SYSTEMS / 2019—NOW</p>
+        <h1 id="hero-title">一份持续生长的<br><span>系统生存手册</span></h1>
+        <p class="hero-intro">从 Linux Mint 到 Windows 11，记录软件安装、环境配置和那些只有亲自踩过才知道的修复方法。</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="docs.html?doc=linux">打开 Linux 手册 <span>↗</span></a>
+          <a class="text-action" href="docs.html?doc=windows">浏览 Windows 记录</a>
+        </div>
+      </div>
+
+      <div class="system-orbit" aria-label="Linux 与 Windows 双平台知识库">
+        <div class="orbit-ring orbit-ring-outer"></div>
+        <div class="orbit-ring orbit-ring-inner"></div>
+        <div class="orbit-core">
+          <span>SYS</span>
+          <strong>02</strong>
+          <small>PLATFORMS</small>
+        </div>
+        <a class="orbit-node node-linux" href="docs.html?doc=linux">
+          <span class="node-code">LNX</span>
+          <strong>Linux Mint</strong>
+          <small>安装 / 配置 / 修复</small>
+        </a>
+        <a class="orbit-node node-windows" href="docs.html?doc=windows">
+          <span class="node-code">WIN</span>
+          <strong>Windows 11</strong>
+          <small>迁移 / 工具 / 优化</small>
+        </a>
+        <span class="orbit-coordinate coord-a">39.9042° N</span>
+        <span class="orbit-coordinate coord-b">116.4074° E</span>
+      </div>
+    </section>
+
+    <section class="platform-strip" aria-label="文档入口">
+      <a class="platform-entry linux-entry" href="docs.html?doc=linux">
+        <span class="entry-number">A</span>
+        <span class="entry-main"><strong>Linux Mint Field Notes</strong><small>软件生态、终端工具、字体、输入法与开发环境</small></span>
+        <span class="entry-meta">PRIMARY GUIDE<br>README.md</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 16h20M19 9l7 7-7 7"/></svg>
+      </a>
+      <a class="platform-entry windows-entry" href="docs.html?doc=windows">
+        <span class="entry-number">B</span>
+        <span class="entry-main"><strong>Windows Migration Log</strong><small>Win11 软件清单、系统偏好、远程与效率工具</small></span>
+        <span class="entry-meta">COMPANION LOG<br>README-windows.md</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 16h20M19 9l7 7-7 7"/></svg>
+      </a>
+    </section>
+
+    <section class="site-manifesto">
+      <p>NOT A TUTORIAL FARM</p>
+      <h2>保留真实使用痕迹，<br>让下一次配置更快一点。</h2>
+      <div class="manifesto-note">
+        <span>ABOUT THIS ARCHIVE</span>
+        <p>这里不是一份追逐版本的百科，而是一套个人工作环境的可恢复记忆。命令可能有年代，经验仍有上下文。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>LE-SHI.GITHUB.IO</span>
+    <span>STATIC / OPEN / ITERATIVE</span>
+    <span id="footer-year"></span>
+  </footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
