@@ -1,0 +1,10 @@
+{{- $path := .Get "file" -}}
+{{- $start := int (.Get "start") -}}
+{{- $end := int (.Get "end") -}}
+{{- if not (fileExists $path) -}}
+  {{- errorf "source-section: source file %q does not exist" $path -}}
+{{- end -}}
+{{- $lines := split (readFile $path) "\n" -}}
+{{- $offset := sub $start 1 -}}
+{{- $count := add (sub $end $start) 1 -}}
+{{- delimit (first $count (after $offset $lines)) "\n" -}}
