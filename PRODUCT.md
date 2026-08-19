@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Delegated: plain static HTML, CSS, and JavaScript so the site can deploy directly to GitHub Pages without a build step.
+Hugo Extended with the Oink `v0.4.1` theme, pinned as a Hugo Module and deployed to GitHub Pages through GitHub Actions. The consuming repository has no Node.js frontend toolchain.
 
 ## Users
 
@@ -29,9 +29,10 @@ Readers browse long technical documents, jump between headings, copy commands, a
 ## Capabilities and Constraints
 
 - Existing Markdown files remain unchanged and are the content source.
-- The site must work as static files on GitHub Pages.
-- Navigation, search, theme selection, and Markdown rendering run in the browser.
-- No backend, database, package manager, or mandatory build process.
+- The site builds to static files and deploys on GitHub Pages.
+- Oink provides navigation, offline search, responsive documentation, print views, theme selection, Markdown output, and page actions.
+- Root `README.md` and `README-windows.md` remain the single content sources and are included at Hugo build time.
+- No backend, database, Node.js, npm, PostCSS, or CDN runtime dependency.
 
 ## Evidence on Hand
 

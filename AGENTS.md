@@ -2,33 +2,40 @@
 
 ## Project Structure & Module Organization
 
-This repository is a compact documentation site rather than an application. The root files are the content:
+This repository is a Hugo documentation site built with the OINK theme. Root Markdown files remain the canonical content sources:
 
 - `README.md` contains the primary Linux Mint setup, software installation, and troubleshooting notes.
 - `README-windows.md` contains Windows 11 migration and configuration notes.
+- `content/` defines Hugo sections and page metadata. Linux and Windows pages include the root guides through `layouts/shortcodes/root-markdown.html`.
+- `data/home/zh.yaml` configures the OINK landing page; `static/` contains the logo and favicon assets.
+- `hugo.yaml` configures navigation, search, theme behavior, and the pinned Hugo Module declared in `go.mod`.
 - `AGENTS.md` defines contribution expectations for maintainers and automated agents.
 
 Keep new material in the most relevant existing document. Add a separate Markdown file only when the topic is large enough to stand alone, and link it from the main README when appropriate.
 
-## Development & Validation Commands
+## Build, Test, and Development Commands
 
-There is no package manager, build process, or automated test suite. Validate documentation changes directly:
+Install Go and Hugo Extended 0.160.1 or newer, then run:
 
 ```powershell
+hugo server --disableFastRender
+hugo --gc --minify
 git diff --check
 git diff -- README.md README-windows.md
 rg "TODO|Pending" *.md
 ```
 
-`git diff --check` catches whitespace errors. Review the rendered Markdown in GitHub or an editor preview, especially nested lists, fenced code blocks, tables, and links. Run commands copied into the documentation only in an appropriate disposable environment; many examples modify system packages or configuration.
+`hugo server` starts the local preview, while the minified build matches the GitHub Pages workflow and downloads OINK through Hugo Modules. `git diff --check` catches whitespace errors. Review navigation, search, table of contents, code blocks, and both desktop and mobile layouts.
 
 ## Writing Style & Naming Conventions
 
 Use UTF-8 Markdown and preserve the document's existing language: most operational notes are in Chinese, while repository-level guidance may be in English. Use ATX headings (`## Heading`), fenced code blocks with a language tag such as `bash` or `powershell`, and backticks for commands, paths, package names, and registry keys. Keep headings descriptive and group instructions by platform or tool. Prefer ordered steps for procedures and bullets for inventories. Name new topic files with lowercase, hyphen-separated names, for example `linux-mint-backup.md`.
 
+Do not copy root README content into `content/`; use the `root-markdown` shortcode so GitHub and the website share one source. Keep theme-specific configuration in `hugo.yaml` or `data/`, and avoid modifying generated `public/` or `resources/_gen/` files.
+
 ## Testing Guidelines
 
-For each change, verify that commands are syntactically complete, URLs point to the intended source, and version-specific instructions state the tested OS or software version. Do not silently replace known-working commands; explain migrations or deprecations. Never add real credentials, activation keys, tokens, private hosts, or personal paths.
+There is no unit-test suite. A change is ready when `hugo --gc --minify` and `git diff --check` pass. For UI changes, inspect `/`, `/docs/linux/`, and `/docs/windows/` at desktop and mobile widths, test offline search and theme switching, and check the browser console. For content changes, verify commands, URLs, headings, and tested software versions.
 
 ## Commit & Pull Request Guidelines
 

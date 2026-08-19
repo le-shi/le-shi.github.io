@@ -1,0 +1,5 @@
+{{- $path := .Get 0 -}}
+{{- if not (fileExists $path) -}}
+  {{- errorf "root-markdown: source file %q does not exist" $path -}}
+{{- end -}}
+{{- readFile $path -}}

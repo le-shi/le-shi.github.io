@@ -1,0 +1,46 @@
+{{- /* OINK page actions, extended for pages whose content lives outside content/. */ -}}
+{{- $p := . -}}
+{{- $markdownURL := "" -}}
+{{- with $p.AlternativeOutputFormats.Get "markdown" }}{{ $markdownURL = .RelPermalink }}{{ end -}}
+{{- $printURL := "" -}}
+{{- with $p.CurrentSection -}}
+  {{- with .AlternativeOutputFormats.Get "print" }}{{ $printURL = .RelPermalink }}{{ end -}}
+{{- end -}}
+{{- $editURL := "" -}}
+{{- $historyURL := "" -}}
+{{- $childURL := "" -}}
+{{- $issueURL := "" -}}
+{{- $projectIssueURL := "" -}}
+{{- $repoPath := "" -}}
+{{- $repo := $p.Param "github_repo" -}}
+{{- $projectRepo := $p.Param "github_project_repo" | default $repo | default "" -}}
+{{- if and $p.File $repo -}}
+  {{- $contentSourcePath := printf "content/%s" $p.File.Path -}}
+  {{- $contentSourcePath = replace $contentSourcePath "\\" "/" -}}
+  {{- $sourcePath := $p.Param "github_source_path" | default $contentSourcePath -}}
+  {{- $sourcePath = replace $sourcePath "\\" "/" -}}
+  {{- $subdir := $p.Param "github_subdir" | default "" -}}
+  {{- $branch := $p.Param "github_branch" | default "main" -}}
+  {{- $pathBase := $p.Param "path_base_for_github_subdir" -}}
+  {{- $pathRename := "" -}}
+  {{- if reflect.IsMap $pathBase -}}
+    {{- $pathRename = $pathBase.to -}}
+    {{- $pathBase = $pathBase.from -}}
+  {{- end -}}
+  {{- with $pathBase }}{{ $sourcePath = replaceRE . $pathRename $sourcePath }}{{ end -}}
+  {{- $repoPath = printf "%s/%s/%s" $branch $subdir $sourcePath | replaceRE "//+" "/" -}}
+  {{- $editURL = printf "%s/edit/%s" $repo $repoPath -}}
+  {{- $historyURL = printf "%s/commits/%s" $repo $repoPath -}}
+  {{- $issueURL = printf "%s/issues/new?%s" $repo (querify "title" $p.Title) -}}
+  {{- $stub := resources.Get "stubs/new-page-template.md" -}}
+  {{- $childQS := querify "value" $stub.Content "filename" "change-me.md" -}}
+  {{- $childRepoPath := printf "%s/%s/%s" $branch $subdir $contentSourcePath | replaceRE "//+" "/" -}}
+  {{- $childURL = printf "%s/new/%s?%s" $repo (path.Dir $childRepoPath) $childQS -}}
+  {{- with $p.Param "github_project_repo" }}{{ $projectIssueURL = printf "%s/issues/new" . }}{{ end -}}
+{{- end -}}
+{{- return (dict
+  "markdown" $markdownURL "printSection" $printURL
+  "edit" $editURL "history" $historyURL "createChild" $childURL "createIssue" $issueURL
+  "createProjectIssue" $projectIssueURL "projectRepo" $projectRepo
+  "repoPath" $repoPath
+) -}}

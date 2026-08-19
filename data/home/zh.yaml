@@ -1,0 +1,103 @@
+sections:
+  - hero
+  - capabilities
+  - cards
+  - principles
+  - cta
+
+hero:
+  title: 一份持续生长的 <strong class="text-nowrap">系统手册</strong>
+  desc: 从 Linux Mint 到 Windows 11，记录软件安装、环境配置和那些只有亲自踩过才知道的修复方法。
+  note: 原始 README 是唯一内容源，网站由 Oink 与 Hugo 静态生成。
+  actions:
+    - label: 阅读 Linux 手册
+      url: docs/linux/
+      icon: fa-brands fa-linux
+      style: primary
+    - label: 查看 Windows 记录
+      url: docs/windows/
+      icon: fa-brands fa-windows
+      style: ghost
+
+capabilities:
+  title: 配置经验，按真实使用场景归档
+  desc: 不重写成泛化教程，保留版本、命令、问题背景和验证结果。
+  items:
+    - ref: LINUX / PRIMARY
+      title: Linux Mint 长期使用记录
+      url: docs/linux/
+      motto: 安装、配置、排错与恢复
+      bullets:
+        - 桌面环境、字体、输入法与窗口行为
+        - 终端、开发工具、远程连接与容器
+        - 软件版本、依赖问题和修复命令
+      value: 面向下一次重装与环境恢复。
+      visual:
+        type: code
+        title: linux-mint.sh
+        aria_label: Linux Mint 命令示例
+        lines:
+          - { class: c, prefix: '# ', text: update system packages }
+          - { class: p, prefix: '$ ', text: sudo apt update }
+          - { class: ok, prefix: '$ ', text: fc-cache -fv }
+    - ref: WINDOWS / COMPANION
+      title: Windows 11 迁移与优化
+      url: docs/windows/
+      motto: 软件清单、系统偏好与验证记录
+      bullets:
+        - 跨平台软件和工作空间迁移
+        - 效率工具、远程桌面与系统偏好
+        - 已成功、待测试和无效方案分组
+      value: 让迁移过程可追踪、可复用。
+      visual:
+        type: code
+        title: windows-notes.ps1
+        aria_label: Windows 配置记录示例
+        lines:
+          - { class: c, prefix: '# ', text: inspect before changing }
+          - { class: p, prefix: '> ', text: Get-ComputerInfo }
+          - { class: ok, prefix: '> ', text: Test-NetConnection }
+
+cards:
+  title: 阅读方式
+  desc: Oink 将长篇 Markdown 转换为可搜索、可打印、可定位的工程文档。
+  columns: 3
+  link_label: 打开
+  items:
+    - name: 全文搜索
+      icon: fa-solid fa-magnifying-glass
+      meta: Offline Search
+      desc: 搜索索引随站点构建，不依赖外部搜索服务。
+      url: docs/
+    - name: 章节导航
+      icon: fa-solid fa-list
+      meta: Reading Flow
+      desc: 侧栏、页内目录与前后翻页帮助浏览长文档。
+      url: docs/linux/
+    - name: 原始记录
+      icon: fa-brands fa-markdown
+      meta: Single Source
+      desc: 网站直接读取根目录 README，不维护重复正文。
+      url: https://github.com/le-shi/le-shi.github.io
+      external: true
+
+principles:
+  title: 这个知识库如何维护
+  columns: 3
+  items:
+    - icon: fa-solid fa-fingerprint
+      title: 保留上下文
+      desc: 记录适用系统、版本、前置条件和实际问题。
+    - icon: fa-solid fa-shield-halved
+      title: 谨慎执行
+      desc: 涉及系统配置的命令先理解作用，再在合适环境中验证。
+    - icon: fa-solid fa-rotate
+      title: 持续修订
+      desc: 新经验补充到原始文档，网站构建后自动同步。
+
+cta:
+  title: 从你正在使用的平台开始。
+  desc: Linux Mint 是主手册，Windows 11 是迁移与配置伴随记录。
+  label: 进入系统文档
+  url: docs/
+  style: primary

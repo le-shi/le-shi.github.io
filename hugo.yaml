@@ -1,0 +1,93 @@
+baseURL: https://le-shi.github.io/
+title: Le Shi 系统手册
+defaultContentLanguage: zh
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true
+
+outputs:
+  home: [HTML, RSS, markdown, LLMS]
+  page: [HTML, markdown]
+  section: [HTML, RSS, print, markdown]
+
+params:
+  description: Linux Mint、Windows 与个人开发环境配置知识库
+  github_repo: https://github.com/le-shi/le-shi.github.io
+  github_project_repo: https://github.com/le-shi/le-shi.github.io
+  github_branch: master
+  path_base_for_github_subdir:
+    from: '^.*[\\/]content[\\/]'
+    to: content/
+  offlineSearch: true
+  offlineSearchIndex: content
+  offlineSearchMaxResults: 12
+  reading_width: wide
+  copyright:
+    authors: '[Le Shi](https://github.com/le-shi)'
+    from_year: 2019
+  footer_center_info: '使用 [Oink](https://oink.pgsty.com) 构建'
+  ui:
+    typography:
+      preset: technical
+    showLightDarkModeMenu: true
+    sidebar_menu_foldable: true
+    sidebar_headings: 3
+    section_index: cards
+    quick_links: [docs, github]
+    page_context_menu:
+      assistant_links: true
+    image_zoom:
+      enable: true
+
+languages:
+  zh:
+    label: 简体中文
+    locale: zh-CN
+    weight: 1
+    title: Le Shi 系统手册
+
+menus:
+  main:
+    - identifier: docs
+      name: 系统文档
+      pageRef: /docs
+      weight: 10
+      params:
+        icon: fa-solid fa-book
+        description: Linux 与 Windows 配置记录
+    - identifier: linux
+      parent: docs
+      name: Linux Mint
+      pageRef: /docs/linux
+      weight: 10
+      params:
+        icon: fa-brands fa-linux
+        description: 软件安装、系统配置与故障修复
+    - identifier: windows
+      parent: docs
+      name: Windows 11
+      pageRef: /docs/windows
+      weight: 20
+      params:
+        icon: fa-brands fa-windows
+        description: 迁移记录、软件清单与系统优化
+    - identifier: github
+      name: GitHub
+      url: https://github.com/le-shi/le-shi.github.io
+      weight: 30
+      params:
+        icon: fa-brands fa-github
+
+module:
+  imports:
+    - path: github.com/pgsty/oink
+  hugoVersion:
+    extended: true
+    min: 0.160.1

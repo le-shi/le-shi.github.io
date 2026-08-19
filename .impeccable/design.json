@@ -1,234 +1,158 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-18T01:44:45.8828279+08:00",
-  "title": "Design System: Le-Shi System Field Guide",
+  "generatedAt": "2026-08-20T02:13:15.2405919+08:00",
+  "title": "Design System: Le Shi System Guide / OINK",
   "extensions": {
     "colorMeta": {
-      "console-void": {
-        "role": "neutral",
-        "displayName": "Console Void",
-        "canonical": "#0d110f",
-        "tonalRamp": ["oklch(15% 0.010 155)", "oklch(25% 0.010 155)", "oklch(36% 0.010 155)", "oklch(48% 0.010 155)", "oklch(60% 0.010 155)", "oklch(72% 0.010 155)", "oklch(84% 0.010 155)", "oklch(95% 0.010 155)"]
-      },
-      "console-surface": {
-        "role": "neutral",
-        "displayName": "Console Surface",
-        "canonical": "#131916",
-        "tonalRamp": ["oklch(15% 0.014 155)", "oklch(25% 0.014 155)", "oklch(36% 0.014 155)", "oklch(48% 0.014 155)", "oklch(60% 0.014 155)", "oklch(72% 0.014 155)", "oklch(84% 0.014 155)", "oklch(95% 0.014 155)"]
-      },
-      "console-raised": {
-        "role": "neutral",
-        "displayName": "Raised Console",
-        "canonical": "#19211d",
-        "tonalRamp": ["oklch(15% 0.018 155)", "oklch(25% 0.018 155)", "oklch(36% 0.018 155)", "oklch(48% 0.018 155)", "oklch(60% 0.018 155)", "oklch(72% 0.018 155)", "oklch(84% 0.018 155)", "oklch(95% 0.018 155)"]
-      },
-      "field-ink": {
-        "role": "neutral",
-        "displayName": "Field Ink",
-        "canonical": "#f1f4ea",
-        "tonalRamp": ["oklch(15% 0.014 115)", "oklch(25% 0.014 115)", "oklch(36% 0.014 115)", "oklch(48% 0.014 115)", "oklch(60% 0.014 115)", "oklch(72% 0.014 115)", "oklch(84% 0.014 115)", "oklch(95% 0.014 115)"]
-      },
-      "telemetry-muted": {
-        "role": "neutral",
-        "displayName": "Telemetry Muted",
-        "canonical": "#9ca79f",
-        "tonalRamp": ["oklch(15% 0.014 155)", "oklch(25% 0.014 155)", "oklch(36% 0.014 155)", "oklch(48% 0.014 155)", "oklch(60% 0.014 155)", "oklch(72% 0.014 155)", "oklch(84% 0.014 155)", "oklch(95% 0.014 155)"]
-      },
-      "seam": {
-        "role": "neutral",
-        "displayName": "Structural Seam",
-        "canonical": "#313b35",
-        "tonalRamp": ["oklch(15% 0.018 155)", "oklch(25% 0.018 155)", "oklch(36% 0.018 155)", "oklch(48% 0.018 155)", "oklch(60% 0.018 155)", "oklch(72% 0.018 155)", "oklch(84% 0.018 155)", "oklch(95% 0.018 155)"]
-      },
-      "linux-signal": {
-        "role": "primary",
-        "displayName": "Linux Signal",
-        "canonical": "#b7f34a",
-        "tonalRamp": ["oklch(15% 0.16 125)", "oklch(25% 0.16 125)", "oklch(36% 0.16 125)", "oklch(48% 0.16 125)", "oklch(60% 0.16 125)", "oklch(72% 0.16 125)", "oklch(84% 0.16 125)", "oklch(95% 0.16 125)"]
-      },
-      "windows-signal": {
-        "role": "secondary",
-        "displayName": "Windows Signal",
-        "canonical": "#46c7ff",
-        "tonalRamp": ["oklch(15% 0.12 225)", "oklch(25% 0.12 225)", "oklch(36% 0.12 225)", "oklch(48% 0.12 225)", "oklch(60% 0.12 225)", "oklch(72% 0.12 225)", "oklch(84% 0.12 225)", "oklch(95% 0.12 225)"]
-      },
-      "warning-signal": {
-        "role": "tertiary",
-        "displayName": "Warning Signal",
-        "canonical": "#ff775f",
-        "tonalRamp": ["oklch(15% 0.15 30)", "oklch(25% 0.15 30)", "oklch(36% 0.15 30)", "oklch(48% 0.15 30)", "oklch(60% 0.15 30)", "oklch(72% 0.15 30)", "oklch(84% 0.15 30)", "oklch(95% 0.15 30)"]
-      },
-      "action-ink": {
-        "role": "neutral",
-        "displayName": "Action Ink",
-        "canonical": "#10150f",
-        "tonalRamp": ["oklch(15% 0.018 135)", "oklch(25% 0.018 135)", "oklch(36% 0.018 135)", "oklch(48% 0.018 135)", "oklch(60% 0.018 135)", "oklch(72% 0.018 135)", "oklch(84% 0.018 135)", "oklch(95% 0.018 135)"]
-      },
-      "light-console-void": {
-        "role": "neutral",
-        "displayName": "Daylight Console",
-        "canonical": "#e9eee8",
-        "tonalRamp": ["oklch(15% 0.012 145)", "oklch(25% 0.012 145)", "oklch(36% 0.012 145)", "oklch(48% 0.012 145)", "oklch(60% 0.012 145)", "oklch(72% 0.012 145)", "oklch(84% 0.012 145)", "oklch(95% 0.012 145)"]
-      },
-      "light-console-surface": {
-        "role": "neutral",
-        "displayName": "Daylight Surface",
-        "canonical": "#f7f9f3",
-        "tonalRamp": ["oklch(15% 0.010 115)", "oklch(25% 0.010 115)", "oklch(36% 0.010 115)", "oklch(48% 0.010 115)", "oklch(60% 0.010 115)", "oklch(72% 0.010 115)", "oklch(84% 0.010 115)", "oklch(95% 0.010 115)"]
-      },
-      "light-console-raised": {
-        "role": "neutral",
-        "displayName": "Daylight Raised",
-        "canonical": "#dce4dc",
-        "tonalRamp": ["oklch(15% 0.016 145)", "oklch(25% 0.016 145)", "oklch(36% 0.016 145)", "oklch(48% 0.016 145)", "oklch(60% 0.016 145)", "oklch(72% 0.016 145)", "oklch(84% 0.016 145)", "oklch(95% 0.016 145)"]
-      },
-      "light-field-ink": {
-        "role": "neutral",
-        "displayName": "Daylight Ink",
-        "canonical": "#111713",
-        "tonalRamp": ["oklch(15% 0.014 145)", "oklch(25% 0.014 145)", "oklch(36% 0.014 145)", "oklch(48% 0.014 145)", "oklch(60% 0.014 145)", "oklch(72% 0.014 145)", "oklch(84% 0.014 145)", "oklch(95% 0.014 145)"]
-      },
-      "light-telemetry-muted": {
-        "role": "neutral",
-        "displayName": "Daylight Telemetry",
-        "canonical": "#58635c",
-        "tonalRamp": ["oklch(15% 0.016 145)", "oklch(25% 0.016 145)", "oklch(36% 0.016 145)", "oklch(48% 0.016 145)", "oklch(60% 0.016 145)", "oklch(72% 0.016 145)", "oklch(84% 0.016 145)", "oklch(95% 0.016 145)"]
-      },
-      "light-seam": {
-        "role": "neutral",
-        "displayName": "Daylight Seam",
-        "canonical": "#bdc8c0",
-        "tonalRamp": ["oklch(15% 0.015 145)", "oklch(25% 0.015 145)", "oklch(36% 0.015 145)", "oklch(48% 0.015 145)", "oklch(60% 0.015 145)", "oklch(72% 0.015 145)", "oklch(84% 0.015 145)", "oklch(95% 0.015 145)"]
-      },
-      "light-linux-signal": {
-        "role": "primary",
-        "displayName": "Daylight Linux Signal",
-        "canonical": "#4f7f16",
-        "tonalRamp": ["oklch(15% 0.13 125)", "oklch(25% 0.13 125)", "oklch(36% 0.13 125)", "oklch(48% 0.13 125)", "oklch(60% 0.13 125)", "oklch(72% 0.13 125)", "oklch(84% 0.13 125)", "oklch(95% 0.13 125)"]
-      },
-      "light-windows-signal": {
-        "role": "secondary",
-        "displayName": "Daylight Windows Signal",
-        "canonical": "#007bab",
-        "tonalRamp": ["oklch(15% 0.11 225)", "oklch(25% 0.11 225)", "oklch(36% 0.11 225)", "oklch(48% 0.11 225)", "oklch(60% 0.11 225)", "oklch(72% 0.11 225)", "oklch(84% 0.11 225)", "oklch(95% 0.11 225)"]
-      },
-      "light-action-ink": {
-        "role": "neutral",
-        "displayName": "Daylight Action Ink",
-        "canonical": "#ffffff",
-        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(36% 0 0)", "oklch(48% 0 0)", "oklch(60% 0 0)", "oklch(72% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"]
-      }
+      "canvas-light": { "role": "neutral", "displayName": "Blueprint Canvas", "canonical": "#f1f4f8", "tonalRamp": ["oklch(15% 0.018 245)", "oklch(25% 0.018 245)", "oklch(36% 0.018 245)", "oklch(48% 0.018 245)", "oklch(60% 0.018 245)", "oklch(72% 0.018 245)", "oklch(84% 0.018 245)", "oklch(95% 0.018 245)"] },
+      "paper-light": { "role": "neutral", "displayName": "Technical Paper", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(36% 0 0)", "oklch(48% 0 0)", "oklch(60% 0 0)", "oklch(72% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"] },
+      "ink-light": { "role": "neutral", "displayName": "Technical Ink", "canonical": "#16222e", "tonalRamp": ["oklch(15% 0.025 245)", "oklch(25% 0.025 245)", "oklch(36% 0.025 245)", "oklch(48% 0.025 245)", "oklch(60% 0.025 245)", "oklch(72% 0.025 245)", "oklch(84% 0.025 245)", "oklch(95% 0.025 245)"] },
+      "soft-light": { "role": "neutral", "displayName": "Soft Technical Copy", "canonical": "#3d4e61", "tonalRamp": ["oklch(15% 0.028 245)", "oklch(25% 0.028 245)", "oklch(36% 0.028 245)", "oklch(48% 0.028 245)", "oklch(60% 0.028 245)", "oklch(72% 0.028 245)", "oklch(84% 0.028 245)", "oklch(95% 0.028 245)"] },
+      "line-light": { "role": "neutral", "displayName": "Quiet Blueprint Line", "canonical": "rgba(48, 74, 105, 0.14)", "tonalRamp": ["oklch(15% 0.035 245 / 0.14)", "oklch(25% 0.035 245 / 0.14)", "oklch(36% 0.035 245 / 0.14)", "oklch(48% 0.035 245 / 0.14)", "oklch(60% 0.035 245 / 0.14)", "oklch(72% 0.035 245 / 0.14)", "oklch(84% 0.035 245 / 0.14)", "oklch(95% 0.035 245 / 0.14)"] },
+      "blue-light": { "role": "primary", "displayName": "Steel Documentation Blue", "canonical": "#245f94", "tonalRamp": ["oklch(15% 0.09 245)", "oklch(25% 0.09 245)", "oklch(36% 0.09 245)", "oklch(48% 0.09 245)", "oklch(60% 0.09 245)", "oklch(72% 0.09 245)", "oklch(84% 0.09 245)", "oklch(95% 0.09 245)"] },
+      "copper-light": { "role": "secondary", "displayName": "Instrument Copper", "canonical": "#b4762e", "tonalRamp": ["oklch(15% 0.10 65)", "oklch(25% 0.10 65)", "oklch(36% 0.10 65)", "oklch(48% 0.10 65)", "oklch(60% 0.10 65)", "oklch(72% 0.10 65)", "oklch(84% 0.10 65)", "oklch(95% 0.10 65)"] },
+      "canvas-dark": { "role": "neutral", "displayName": "Night Blueprint Canvas", "canonical": "#0b1119", "tonalRamp": ["oklch(15% 0.022 250)", "oklch(25% 0.022 250)", "oklch(36% 0.022 250)", "oklch(48% 0.022 250)", "oklch(60% 0.022 250)", "oklch(72% 0.022 250)", "oklch(84% 0.022 250)", "oklch(95% 0.022 250)"] },
+      "paper-dark": { "role": "neutral", "displayName": "Night Raised Paper", "canonical": "#121c29", "tonalRamp": ["oklch(15% 0.030 250)", "oklch(25% 0.030 250)", "oklch(36% 0.030 250)", "oklch(48% 0.030 250)", "oklch(60% 0.030 250)", "oklch(72% 0.030 250)", "oklch(84% 0.030 250)", "oklch(95% 0.030 250)"] },
+      "ink-dark": { "role": "neutral", "displayName": "Night Technical Ink", "canonical": "#e8eef6", "tonalRamp": ["oklch(15% 0.018 245)", "oklch(25% 0.018 245)", "oklch(36% 0.018 245)", "oklch(48% 0.018 245)", "oklch(60% 0.018 245)", "oklch(72% 0.018 245)", "oklch(84% 0.018 245)", "oklch(95% 0.018 245)"] },
+      "soft-dark": { "role": "neutral", "displayName": "Night Soft Copy", "canonical": "#b6c2d2", "tonalRamp": ["oklch(15% 0.025 245)", "oklch(25% 0.025 245)", "oklch(36% 0.025 245)", "oklch(48% 0.025 245)", "oklch(60% 0.025 245)", "oklch(72% 0.025 245)", "oklch(84% 0.025 245)", "oklch(95% 0.025 245)"] },
+      "line-dark": { "role": "neutral", "displayName": "Night Quiet Line", "canonical": "rgba(148, 176, 210, 0.16)", "tonalRamp": ["oklch(15% 0.035 245 / 0.16)", "oklch(25% 0.035 245 / 0.16)", "oklch(36% 0.035 245 / 0.16)", "oklch(48% 0.035 245 / 0.16)", "oklch(60% 0.035 245 / 0.16)", "oklch(72% 0.035 245 / 0.16)", "oklch(84% 0.035 245 / 0.16)", "oklch(95% 0.035 245 / 0.16)"] },
+      "blue-dark": { "role": "primary", "displayName": "Night Documentation Blue", "canonical": "#5da2dd", "tonalRamp": ["oklch(15% 0.10 245)", "oklch(25% 0.10 245)", "oklch(36% 0.10 245)", "oklch(48% 0.10 245)", "oklch(60% 0.10 245)", "oklch(72% 0.10 245)", "oklch(84% 0.10 245)", "oklch(95% 0.10 245)"] },
+      "copper-dark": { "role": "secondary", "displayName": "Night Instrument Copper", "canonical": "#e0a35c", "tonalRamp": ["oklch(15% 0.10 65)", "oklch(25% 0.10 65)", "oklch(36% 0.10 65)", "oklch(48% 0.10 65)", "oklch(60% 0.10 65)", "oklch(72% 0.10 65)", "oklch(84% 0.10 65)", "oklch(95% 0.10 65)"] },
+      "action-blue": { "role": "primary", "displayName": "Solid Action Blue", "canonical": "#2f6793", "tonalRamp": ["oklch(15% 0.08 245)", "oklch(25% 0.08 245)", "oklch(36% 0.08 245)", "oklch(48% 0.08 245)", "oklch(60% 0.08 245)", "oklch(72% 0.08 245)", "oklch(84% 0.08 245)", "oklch(95% 0.08 245)"] },
+      "action-blue-hover": { "role": "primary", "displayName": "Pressed Action Blue", "canonical": "#275a82", "tonalRamp": ["oklch(15% 0.075 245)", "oklch(25% 0.075 245)", "oklch(36% 0.075 245)", "oklch(48% 0.075 245)", "oklch(60% 0.075 245)", "oklch(72% 0.075 245)", "oklch(84% 0.075 245)", "oklch(95% 0.075 245)"] },
+      "terminal": { "role": "neutral", "displayName": "Terminal Plane", "canonical": "#0a0f16", "tonalRamp": ["oklch(15% 0.018 250)", "oklch(25% 0.018 250)", "oklch(36% 0.018 250)", "oklch(48% 0.018 250)", "oklch(60% 0.018 250)", "oklch(72% 0.018 250)", "oklch(84% 0.018 250)", "oklch(95% 0.018 250)"] },
+      "terminal-ink": { "role": "neutral", "displayName": "Terminal Ink", "canonical": "#c9d6e8", "tonalRamp": ["oklch(15% 0.030 245)", "oklch(25% 0.030 245)", "oklch(36% 0.030 245)", "oklch(48% 0.030 245)", "oklch(60% 0.030 245)", "oklch(72% 0.030 245)", "oklch(84% 0.030 245)", "oklch(95% 0.030 245)"] },
+      "logo-charcoal": { "role": "neutral", "displayName": "Logo Charcoal", "canonical": "#17191f", "tonalRamp": ["oklch(15% 0.012 270)", "oklch(25% 0.012 270)", "oklch(36% 0.012 270)", "oklch(48% 0.012 270)", "oklch(60% 0.012 270)", "oklch(72% 0.012 270)", "oklch(84% 0.012 270)", "oklch(95% 0.012 270)"] },
+      "logo-orange": { "role": "secondary", "displayName": "Logo Orange", "canonical": "#f09a38", "tonalRamp": ["oklch(15% 0.15 65)", "oklch(25% 0.15 65)", "oklch(36% 0.15 65)", "oklch(48% 0.15 65)", "oklch(60% 0.15 65)", "oklch(72% 0.15 65)", "oklch(84% 0.15 65)", "oklch(95% 0.15 65)"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero, manifesto, and document masthead statements." },
-      "headline": { "displayName": "Headline", "purpose": "Major document sections." },
-      "title": { "displayName": "Title", "purpose": "Subsections, nodes, and platform entries." },
-      "body": { "displayName": "Body", "purpose": "Long-form Markdown reading." },
-      "label": { "displayName": "Telemetry Label", "purpose": "Status, provenance, navigation, and compact controls." }
+      "display": { "displayName": "Technical Display", "purpose": "首页主标题、品牌字标和强展示信息。" },
+      "headline": { "displayName": "Section Headline", "purpose": "首页区块标题与主要内容分区。" },
+      "title": { "displayName": "Card Title", "purpose": "首页卡片、原则项与紧凑信息标题。" },
+      "body": { "displayName": "Chinese Reading Body", "purpose": "README 转换后的长篇中文正文与说明。" },
+      "meta": { "displayName": "Technical Metadata", "purpose": "分类、文件、状态、眉题和操作提示。" },
+      "code": { "displayName": "Command Code", "purpose": "命令、代码块与终端演示。" }
     },
     "shadows": [
-      { "name": "status-glow", "value": "0 0 10px color-mix(in srgb, var(--linux) 70%, transparent)", "purpose": "Signals synchronized or online state." },
-      { "name": "drawer-separation", "value": "18px 0 50px rgba(0,0,0,.35)", "purpose": "Separates the mobile contents drawer from the reading surface." },
-      { "name": "dialog-ambient", "value": "0 24px 80px rgba(0,0,0,.45)", "purpose": "Isolates search as an overlay." }
+      { "name": "brand-low-light", "value": "0 2px 10px rgba(23, 42, 66, 0.08)", "purpose": "轻微分离滚动后的顶部栏。" },
+      { "name": "brand-medium-light", "value": "0 12px 34px rgba(23, 42, 66, 0.12)", "purpose": "悬浮卡片、菜单和标准抬升表面。" },
+      { "name": "brand-medium-dark", "value": "0 14px 44px rgba(2, 8, 18, 0.45)", "purpose": "深色主题中的标准抬升表面。" },
+      { "name": "landing-feature", "value": "0 26px 70px rgba(1, 6, 14, 0.26)", "purpose": "首页重点展示容器。" },
+      { "name": "code-low", "value": "0 1px 2px rgba(0, 0, 0, 0.06)", "purpose": "从正文纸面轻微分离代码块。" }
     ],
     "motion": [
-      { "name": "ease-decisive", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Default easing for directional hover and entrance movement." },
-      { "name": "orbit-entry", "value": "1.4s var(--ease)", "purpose": "Introduces the outer system diagram once on page load." },
-      { "name": "orbit-rotation", "value": "42s linear infinite", "purpose": "Provides low-attention ambient motion to the inner orbit." },
-      { "name": "reduced-motion", "value": ".01ms", "purpose": "Collapses animation and transition duration when reduced motion is requested." }
+      { "name": "interaction-fast", "value": "100ms ease", "purpose": "导航、搜索和轻量工具控件的颜色变化。" },
+      { "name": "card-lift", "value": "180ms ease", "purpose": "首页卡片的上移、边框和阴影变化。" },
+      { "name": "feature-lift", "value": "220ms ease", "purpose": "代码演示与重点展示容器的抬升。" },
+      { "name": "dialog-ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "搜索、抽屉和对话表面的进入退出。" },
+      { "name": "reduced-motion", "value": "none", "purpose": "用户请求减少动态效果时移除卡片和展示组件 transition。" }
     ],
     "breakpoints": [
-      { "name": "stacked-stage", "value": "980px" },
-      { "name": "mobile-console", "value": "720px" }
+      { "name": "sm", "value": "576px" },
+      { "name": "md", "value": "768px" },
+      { "name": "landing-stack", "value": "900px" },
+      { "name": "lg", "value": "992px" },
+      { "name": "landing-wide", "value": "1100px" },
+      { "name": "xl", "value": "1200px" },
+      { "name": "xxl", "value": "1400px" }
     ]
   },
   "components": [
     {
-      "name": "Primary Linux Action",
+      "name": "Primary Documentation Action",
       "kind": "button",
-      "refersTo": "primary-action",
-      "description": "The main forward action for entering the Linux field guide.",
-      "html": "<a class=\"ds-primary-action\" href=\"#\">OPEN LINUX GUIDE <span aria-hidden=\"true\">&#8599;</span></a>",
-      "css": ".ds-primary-action { min-height: 54px; display: inline-flex; align-items: center; gap: 34px; padding: 0 22px; background: var(--linux, #b7f34a); color: var(--accent-ink, #10150f); font-family: Archivo, \"Noto Sans SC\", sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s; } .ds-primary-action span { font-size: 20px; transition: transform .25s cubic-bezier(.16, 1, .3, 1); } .ds-primary-action:hover span { transform: translate(4px, -4px); } .ds-primary-action:focus-visible { outline: 3px solid var(--windows, #46c7ff); outline-offset: 4px; } .ds-primary-action:active { filter: brightness(.92); }"
+      "refersTo": "button-primary",
+      "description": "首页的主要阅读入口，使用实心钢蓝和轻量抬升。",
+      "html": "<a class=\"ds-oink-button ds-oink-button-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 19h16M6 17V5h12v12M9 9h6M9 12h6\"/></svg><span>阅读 Linux 手册</span></a>",
+      "css": ".ds-oink-button { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:44px; padding:12px 24px; border:1px solid transparent; border-radius:8px; font:700 .98rem/1 -apple-system,BlinkMacSystemFont,\"PingFang SC\",\"Microsoft YaHei\",sans-serif; text-decoration:none; transition:transform 160ms ease,box-shadow 160ms ease,background-color 160ms ease; } .ds-oink-button svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; } .ds-oink-button-primary { background:#2f6793; color:#fff; box-shadow:0 6px 22px rgba(47,103,147,.3); } .ds-oink-button-primary:hover { background:#275a82; color:#fff; box-shadow:0 10px 30px rgba(47,103,147,.38); transform:translateY(-2px); } .ds-oink-button-primary:focus-visible { outline:2px solid #b4762e; outline-offset:3px; } .ds-oink-button-primary:active { transform:translateY(0); box-shadow:0 3px 12px rgba(47,103,147,.28); }"
     },
     {
-      "name": "Utility Icon Button",
+      "name": "Ghost Documentation Action",
       "kind": "button",
-      "refersTo": "icon-button",
-      "description": "A square utility control used for search, theme, and repository actions.",
-      "html": "<button class=\"ds-icon-button\" type=\"button\" aria-label=\"Search\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m16 16 4 4\"/></svg></button>",
-      "css": ".ds-icon-button { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line, #313b35); background: transparent; color: var(--ink, #f1f4ea); cursor: pointer; transition: border-color .2s, background .2s; } .ds-icon-button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; } .ds-icon-button:hover { border-color: var(--ink, #f1f4ea); background: var(--surface-2, #19211d); } .ds-icon-button:focus-visible { outline: 3px solid var(--windows, #46c7ff); outline-offset: 4px; } .ds-icon-button:active { background: var(--surface, #131916); }"
+      "refersTo": "button-ghost",
+      "description": "首页的次级阅读入口，以细边框保留层级。",
+      "html": "<a class=\"ds-oink-ghost\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5h18v14H3zM8 9h8M8 13h5\"/></svg><span>查看 Windows 记录</span></a>",
+      "css": ".ds-oink-ghost { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:44px; padding:12px 24px; border:1px solid rgba(48,74,105,.3); border-radius:8px; background:transparent; color:#16222e; font:700 .98rem/1 -apple-system,BlinkMacSystemFont,\"PingFang SC\",\"Microsoft YaHei\",sans-serif; text-decoration:none; transition:transform 160ms ease,border-color 160ms ease,color 160ms ease,background-color 160ms ease; } .ds-oink-ghost svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; } .ds-oink-ghost:hover { border-color:#245f94; background:#fff; color:#1d588c; transform:translateY(-2px); } .ds-oink-ghost:focus-visible { outline:2px solid #b4762e; outline-offset:3px; } .ds-oink-ghost:active { transform:translateY(0); }"
     },
     {
-      "name": "Document Switcher",
-      "kind": "nav",
-      "refersTo": "navigation-active",
-      "description": "Platform tabs with a full signal-color active field.",
-      "html": "<nav class=\"ds-doc-switcher\" aria-label=\"Document switcher\"><a class=\"ds-active\" href=\"#\">LINUX</a><a href=\"#\">WINDOWS</a></nav>",
-      "css": ".ds-doc-switcher { height: 72px; display: flex; align-items: stretch; border: 1px solid var(--line, #313b35); } .ds-doc-switcher a { min-width: 112px; display: grid; place-items: center; color: var(--muted, #9ca79f); font: 600 10px \"Azeret Mono\", monospace; text-decoration: none; border-right: 1px solid var(--line, #313b35); } .ds-doc-switcher a:last-child { border-right: 0; } .ds-doc-switcher a:hover { color: var(--ink, #f1f4ea); background: var(--surface-2, #19211d); } .ds-doc-switcher a.ds-active { color: var(--accent-ink, #10150f); background: var(--linux, #b7f34a); } .ds-doc-switcher a:focus-visible { outline: 3px solid var(--windows, #46c7ff); outline-offset: -4px; }"
-    },
-    {
-      "name": "Platform Entry",
+      "name": "OINK Landing Card",
       "kind": "card",
-      "refersTo": "platform-entry",
-      "description": "A full-width document entry that reads as a console row instead of a floating card.",
-      "html": "<a class=\"ds-platform-entry\" href=\"#\"><span class=\"ds-entry-number\">A</span><span class=\"ds-entry-main\"><strong>Linux Mint Field Notes</strong><small>Software, terminals, fonts, input methods, and development.</small></span><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\"><path d=\"M6 16h20M19 9l7 7-7 7\"/></svg></a>",
-      "css": ".ds-platform-entry { min-height: 164px; display: grid; grid-template-columns: 50px 1fr 40px; align-items: center; gap: 22px; padding: 28px 4vw; border: 1px solid var(--line, #313b35); color: var(--linux, #b7f34a); text-decoration: none; transition: background .25s; } .ds-entry-number { color: var(--muted, #9ca79f); font: 600 12px \"Azeret Mono\", monospace; } .ds-entry-main { display: flex; flex-direction: column; gap: 9px; } .ds-entry-main strong { font: 700 24px Archivo, sans-serif; } .ds-entry-main small { color: var(--muted, #9ca79f); line-height: 1.5; } .ds-platform-entry svg { width: 30px; fill: none; stroke: currentColor; transition: transform .3s cubic-bezier(.16, 1, .3, 1); } .ds-platform-entry:hover { background: var(--surface, #131916); } .ds-platform-entry:hover svg { transform: translateX(7px); } .ds-platform-entry:focus-visible { outline: 3px solid var(--windows, #46c7ff); outline-offset: 4px; }"
+      "refersTo": "landing-card",
+      "description": "首页阅读能力卡片，使用纸面、蓝色图标和铜色元数据。",
+      "html": "<article class=\"ds-oink-card\"><div class=\"ds-oink-card-media\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m16 16 4 4\"/></svg></div><p class=\"ds-oink-card-meta\">OFFLINE SEARCH</p><h3>全文搜索</h3><p>搜索索引随站点构建，不依赖外部搜索服务。</p><a href=\"#\">打开 <span aria-hidden=\"true\">&#8594;</span></a></article>",
+      "css": ".ds-oink-card { display:flex; flex-direction:column; align-items:flex-start; min-height:250px; padding:26px; border:1px solid rgba(48,74,105,.14); border-radius:12px; background:#fff; color:#16222e; box-shadow:0 1px 0 rgba(255,255,255,.025); font-family:-apple-system,BlinkMacSystemFont,\"PingFang SC\",\"Microsoft YaHei\",sans-serif; transition:transform 180ms ease,border-color 180ms ease,box-shadow 180ms ease; } .ds-oink-card:hover { border-color:rgba(180,118,46,.6); box-shadow:0 12px 34px rgba(23,42,66,.12); transform:translateY(-3px); } .ds-oink-card-media { display:grid; width:48px; height:48px; margin-bottom:20px; place-items:center; border:1px solid rgba(48,74,105,.14); border-radius:10px; background:rgba(36,95,148,.07); color:#245f94; } .ds-oink-card-media svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:2; } .ds-oink-card-meta { margin:0 0 8px; color:#b4762e; font:600 .66rem/1.4 \"IBM Plex Mono\",monospace; letter-spacing:.11em; } .ds-oink-card h3 { margin:0 0 10px; font-size:1.18rem; font-weight:800; } .ds-oink-card>p:not(.ds-oink-card-meta) { margin:0; color:#3d4e61; font-size:.9rem; line-height:1.7; } .ds-oink-card>a { display:inline-flex; gap:7px; margin-top:auto; padding-top:18px; color:#245f94; font:600 .74rem/1.4 \"IBM Plex Mono\",monospace; text-decoration:none; } .ds-oink-card>a:hover span { transform:translateX(3px); } .ds-oink-card>a:focus-visible { outline:2px solid #b4762e; outline-offset:3px; } .ds-oink-card>a span { transition:transform 160ms ease; }"
     },
     {
-      "name": "Table of Contents Item",
-      "kind": "nav",
-      "description": "A quiet reading-navigation row with a platform seam for active state.",
-      "html": "<nav class=\"ds-toc\"><a href=\"#\">Software installation</a><a class=\"ds-active\" href=\"#\">Terminal configuration</a></nav>",
-      "css": ".ds-toc { width: 260px; padding: 18px 0; background: var(--surface, #131916); border: 1px solid var(--line, #313b35); } .ds-toc a { display: block; padding: 8px 25px; color: var(--muted, #9ca79f); font: 400 12px/1.45 Archivo, sans-serif; text-decoration: none; border-left: 2px solid transparent; } .ds-toc a:hover, .ds-toc a.ds-active { color: var(--ink, #f1f4ea); border-left-color: var(--linux, #b7f34a); background: color-mix(in srgb, var(--linux, #b7f34a) 7%, transparent); } .ds-toc a:focus-visible { outline: 3px solid var(--windows, #46c7ff); outline-offset: -3px; }"
-    },
-    {
-      "name": "Search Field",
+      "name": "Header Search Trigger",
       "kind": "input",
-      "refersTo": "search-field",
-      "description": "A borderless field housed inside a sharply seamed search header.",
-      "html": "<div class=\"ds-search-field\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m16 16 4 4\"/></svg><input type=\"search\" placeholder=\"Search this document...\"><button type=\"button\">ESC</button></div>",
-      "css": ".ds-search-field { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; gap: 15px; padding: 18px; border: 1px solid var(--line, #313b35); background: var(--surface, #131916); color: var(--ink, #f1f4ea); } .ds-search-field svg { width: 20px; fill: none; stroke: var(--muted, #9ca79f); } .ds-search-field input { min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; font: 400 18px Archivo, sans-serif; } .ds-search-field button { border: 1px solid var(--line, #313b35); background: transparent; color: var(--muted, #9ca79f); font: 600 8px \"Azeret Mono\", monospace; padding: 7px; } .ds-search-field:focus-within { outline: 3px solid var(--windows, #46c7ff); outline-offset: 4px; } .ds-search-field button:hover { color: var(--ink, #f1f4ea); border-color: currentColor; }"
+      "refersTo": "search-trigger",
+      "description": "桌面顶部栏的离线搜索入口，带图标、提示与快捷键。",
+      "html": "<button class=\"ds-oink-search\" type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><span>搜索...</span><kbd>/</kbd></button>",
+      "css": ".ds-oink-search { display:inline-flex; align-items:center; gap:8px; width:190px; height:34px; padding:0 8px 0 10px; border:1px solid rgba(48,74,105,.14); border-radius:8px; background:transparent; color:#586b80; font:400 13px/1.4 -apple-system,BlinkMacSystemFont,\"PingFang SC\",sans-serif; cursor:pointer; transition:background-color 100ms ease,border-color 100ms ease,color 100ms ease; } .ds-oink-search svg { flex:none; width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2; } .ds-oink-search span { flex:1; text-align:left; } .ds-oink-search kbd { min-width:18px; padding:0 5px; border:1px solid rgba(48,74,105,.14); border-radius:5px; background:#f1f4f8; color:#586b80; font:400 11px/17px \"IBM Plex Mono\",monospace; } .ds-oink-search:hover { border-color:#3d4e61; background:#fff; color:#16222e; } .ds-oink-search:focus-visible { outline:2px solid #245f94; outline-offset:2px; } .ds-oink-search:active { background:#e9eef4; }"
     },
     {
-      "name": "Code Block",
+      "name": "Documentation Sidebar Item",
+      "kind": "nav",
+      "refersTo": "sidebar-item",
+      "description": "文档树形导航行，使用柔和 hover 与蓝色 active wash。",
+      "html": "<nav class=\"ds-oink-sidebar\"><a href=\"#\">文档</a><a class=\"ds-active\" href=\"#\">Linux Mint</a><a href=\"#\">Windows 11</a></nav>",
+      "css": ".ds-oink-sidebar { width:250px; padding:10px; background:color-mix(in srgb,#f1f4f8 96%,#16222e 4%); color:#586b80; font:400 14px/1.4 -apple-system,BlinkMacSystemFont,\"PingFang SC\",sans-serif; } .ds-oink-sidebar a { display:flex; align-items:center; min-height:34px; margin-top:2px; padding:6px 8px; border-radius:10px; color:inherit; text-decoration:none; transition:background-color 150ms ease; } .ds-oink-sidebar a:first-child { color:#16222e; font-weight:500; } .ds-oink-sidebar a:hover { background:rgba(22,34,46,.06); color:#16222e; } .ds-oink-sidebar a.ds-active { background:rgba(36,95,148,.1); color:#245f94; } .ds-oink-sidebar a:focus-visible { outline:2px solid #245f94; outline-offset:-2px; }"
+    },
+    {
+      "name": "Page Action Group",
+      "kind": "button",
+      "refersTo": "page-action",
+      "description": "文档标题旁的 Markdown 复制与上下文菜单分段控件。",
+      "html": "<div class=\"ds-oink-actions\"><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"8\" y=\"8\" width=\"11\" height=\"11\" rx=\"2\"/><path d=\"M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3\"/></svg><span>复制</span></button><button type=\"button\" aria-label=\"更多操作\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m7 10 5 5 5-5\"/></svg></button></div>",
+      "css": ".ds-oink-actions { display:inline-flex; overflow:hidden; border:1px solid rgba(48,74,105,.14); border-radius:.5rem; background:#fff; } .ds-oink-actions button { display:inline-flex; align-items:center; gap:.4rem; padding:.3rem .6rem; border:0; background:transparent; color:#586b80; font:400 13px/1.4 -apple-system,BlinkMacSystemFont,\"PingFang SC\",sans-serif; cursor:pointer; transition:background-color 100ms ease,color 100ms ease; } .ds-oink-actions button+button { border-left:1px solid rgba(48,74,105,.14); } .ds-oink-actions svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; } .ds-oink-actions button:hover { background:#f6f9fc; color:#16222e; } .ds-oink-actions button:focus-visible { outline:2px solid #245f94; outline-offset:-2px; } .ds-oink-actions button:active { background:#e9eef4; }"
+    },
+    {
+      "name": "Technical Code Block",
       "kind": "custom",
       "refersTo": "code-block",
-      "description": "A source-oriented code plane with language provenance and a copy control.",
-      "html": "<div class=\"ds-code-block\" data-language=\"bash\"><button type=\"button\">COPY</button><pre><code>sudo apt update\nsudo apt upgrade</code></pre></div>",
-      "css": ".ds-code-block { position: relative; padding: 48px 22px 22px; overflow: auto; background: #090c0a; border: 1px solid var(--line, #313b35); color: #d9e4dc; font: 400 14px/1.65 \"Azeret Mono\", monospace; } .ds-code-block::before { content: attr(data-language); position: absolute; left: 20px; top: 14px; color: #78847c; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; } .ds-code-block pre { margin: 0; white-space: pre-wrap; } .ds-code-block button { position: absolute; top: 8px; right: 8px; border: 1px solid #354039; background: #141a16; color: #b7c1ba; padding: 7px 10px; font: 600 8px \"Azeret Mono\", monospace; cursor: pointer; } .ds-code-block button:hover { color: var(--linux, #b7f34a); border-color: currentColor; } .ds-code-block button:focus-visible { outline: 3px solid var(--windows, #46c7ff); outline-offset: 3px; } .ds-code-block button:active { background: #1b241e; }"
+      "description": "OINK 技术预设下的终端代码面板，包含语言标签与复制动作。",
+      "html": "<div class=\"ds-oink-code\"><div class=\"ds-oink-code-head\"><span>BASH</span><button type=\"button\" aria-label=\"复制代码\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"8\" y=\"8\" width=\"11\" height=\"11\" rx=\"2\"/><path d=\"M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3\"/></svg></button></div><pre><code><span class=\"ds-comment\"># update packages</span>\n<span class=\"ds-prompt\">$</span> sudo apt update</code></pre></div>",
+      "css": ".ds-oink-code { overflow:hidden; border:1px solid rgba(148,176,210,.22); border-radius:12px; background:#0a0f16; color:#c9d6e8; box-shadow:0 1px 2px rgba(0,0,0,.06); } .ds-oink-code-head { display:flex; min-height:42px; align-items:center; justify-content:space-between; padding:7px 9px 7px 14px; border-bottom:1px solid rgba(148,176,210,.14); background:rgba(148,176,210,.05); } .ds-oink-code-head>span { color:rgba(200,215,235,.58); font:600 .68rem/1 \"IBM Plex Mono\",monospace; letter-spacing:.055em; } .ds-oink-code button { display:grid; width:32px; height:32px; place-items:center; border:0; border-radius:4px; background:transparent; color:#b6c2d2; } .ds-oink-code button svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; } .ds-oink-code button:hover { background:#182435; color:#f4f8fc; } .ds-oink-code button:focus-visible { outline:2px solid rgba(93,162,221,.45); outline-offset:1px; } .ds-oink-code pre { margin:0; padding:24px; background:transparent; color:inherit; font:400 .9rem/1.9 \"IBM Plex Mono\",\"Cascadia Code\",monospace; } .ds-oink-code .ds-comment { color:#64748b; } .ds-oink-code .ds-prompt { color:#7fd39a; }"
+    },
+    {
+      "name": "OINK Brand Lockup",
+      "kind": "custom",
+      "description": "静态 Logo 与技术展示字标组成的导航品牌。",
+      "html": "<a class=\"ds-oink-brand\" href=\"#\"><svg viewBox=\"0 0 64 64\" role=\"img\" aria-label=\"Le Shi\"><rect width=\"64\" height=\"64\" rx=\"14\" fill=\"#17191f\"/><path d=\"M16 14v36h22\" fill=\"none\" stroke=\"#fff\" stroke-width=\"8\"/><path d=\"M44 14v36\" fill=\"none\" stroke=\"#f09a38\" stroke-width=\"8\"/></svg><span>LE SHI SYSTEM GUIDE</span></a>",
+      "css": ".ds-oink-brand { display:inline-flex; align-items:center; gap:10px; color:#16222e; text-decoration:none; } .ds-oink-brand svg { width:28px; height:28px; } .ds-oink-brand span { margin-right:-.14em; background:linear-gradient(115deg,#1d588c 6%,#b4762e 94%); background-clip:text; color:transparent; font:700 1.05rem/1 \"Chakra Petch\",-apple-system,BlinkMacSystemFont,sans-serif; letter-spacing:.14em; } .ds-oink-brand:hover span { filter:saturate(1.15); } .ds-oink-brand:focus-visible { outline:2px solid #b4762e; outline-offset:3px; border-radius:8px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Cross-Platform Operations Console",
-    "overview": "The site treats a long-lived personal knowledge base as a live control surface rather than a generic blog. Dark console planes, crisp seams, oversized editorial headings, orbit geometry, and compact telemetry labels make Linux and Windows guidance feel like two coordinated systems inside one maintained field guide.\n\nThe system is dense but not cramped: large moments establish hierarchy, while the documentation view becomes quiet, linear, and source-focused. Light mode rebinds the same semantic roles without changing the visual grammar. Motion is sparse and purposeful, with a reduced-motion fallback built into the system.",
+    "northStar": "原生工程手册",
+    "overview": "本站是 OINK `v0.4.1` 原生技术文档系统在 Le Shi 知识库上的实际落地：Hugo 负责静态生成，OINK 负责首页区块、文档壳层、离线搜索、主题切换、页面操作、打印和响应式阅读。视觉权威只来自 OINK 模块的 `technical` 排版预设、编译后的主题 CSS、当前 Hugo 配置与渲染结果。\n\n整体像一份经过整理的工程现场手册：浅色模式以冷蓝灰纸面和细网格营造精密感，钢蓝承担交互与链接，铜色标记来源、分类和技术元数据；深色模式把同一语义映射到深海军蓝表面。首页允许更强的品牌表达，文档页则退回稳定、清晰、可长时间阅读的三栏工作区。",
     "keyCharacteristics": [
-      "Dark-first console surfaces with a complete light-theme remap.",
-      "Linux green and Windows blue act as platform signals, not decoration.",
-      "Sharp seams, square controls, circular system diagrams, and almost no ornamental radius.",
-      "Archivo carries editorial hierarchy; Azeret Mono carries metadata and operational state.",
-      "Responsive layouts preserve direct platform access and long-form reading on narrow screens."
+      "OINK 原生首页区块与技术文档壳层，不维护平行的自定义 UI 系统。",
+      "冷蓝灰背景、钢蓝交互、铜色元数据组成稳定的双主题品牌语法。",
+      "Chakra Petch 只承担品牌展示，系统无衬线字体负责中文正文，IBM Plex Mono 负责代码与元数据。",
+      "8-18px 的克制圆角、细边框与轻量阴影建立层次。",
+      "桌面三栏阅读、可折叠侧栏、页内目录、离线搜索与移动端抽屉共同服务长文档。"
     ],
     "rules": [
-      { "name": "The Two Signal Rule", "body": "Linux green means Linux or primary system readiness; Windows blue means Windows or keyboard focus. Do not reuse either as an arbitrary decorative accent.", "section": "colors" },
-      { "name": "The Theme Rebinding Rule", "body": "Light mode changes the values of the semantic CSS custom properties, never the meaning or hierarchy of their roles.", "section": "colors" },
-      { "name": "The Mono Is Telemetry Rule", "body": "Use the monospaced face for system metadata and controls, not for ordinary paragraphs or expressive headings.", "section": "typography" },
-      { "name": "The Seam Before Shadow Rule", "body": "Use tonal layers and one-pixel borders at rest; reserve shadows for overlays, drawers, and live status.", "section": "elevation" },
-      { "name": "The Square Interface Rule", "body": "Do not introduce rounded cards or pill controls; circular geometry must communicate system motion, status, or orbit structure.", "section": "shapes" }
+      { "name": "The Blue Does Work Rule", "body": "钢蓝只用于可操作、可跳转、当前状态或信息图标；普通装饰不抢占交互颜色。", "section": "colors" },
+      { "name": "The Copper Annotates Rule", "body": "铜色负责品牌与技术注释，不与主按钮争夺行动优先级。", "section": "colors" },
+      { "name": "The Paired Theme Rule", "body": "新增颜色必须同时考虑浅色和深色语义，不得只在一个主题中成立。", "section": "colors" },
+      { "name": "The Three-Voice Rule", "body": "Chakra Petch 用于品牌展示，系统无衬线用于内容，IBM Plex Mono 用于机器语义；不要把三种声音混在同一文本层级。", "section": "typography" },
+      { "name": "The Layer Before Lift Rule", "body": "先用语义表面和边框建立层次，只有可悬浮、可展开或需从页面分离的组件才增加阴影。", "section": "elevation" },
+      { "name": "The Radius Has Rank Rule", "body": "控件小圆角、内容中圆角、重点容器大圆角；不要随意混用，也不要把所有元素改成胶囊。", "section": "shapes" }
     ],
     "dos": [
-      "Do preserve semantic platform color: Linux green for Linux and primary readiness, Windows blue for Windows and focus.",
-      "Do use one-pixel seams and tonal layering to organize dense screens.",
-      "Do keep long-form content centered, generously led, and visually quieter than the homepage.",
-      "Do retain visible keyboard focus, reduced-motion behavior, and the mobile bottom document switcher.",
-      "Do use monospaced uppercase labels for provenance, status, and compact controls."
+      "Do 把 OINK `v0.4.1` 模块、`hugo.yaml`、首页数据和静态 Logo 视为当前设计权威。",
+      "Do 通过 OINK/Hugo 的配置、数据区块、菜单和官方覆盖点扩展界面。",
+      "Do 保持钢蓝交互、铜色注释、蓝灰双主题与技术排版预设的一致语义。",
+      "Do 保留离线搜索、主题切换、页面操作、可折叠侧栏、页内目录、打印和移动抽屉。",
+      "Do 让首页承担品牌表达，让文档正文优先可读、可扫描、可复制。"
     ],
     "donts": [
-      "Don't turn the site into a generic blog grid of rounded cards.",
-      "Don't add gradients, glows, or shadows as decoration; the existing radial field and state shadows are sufficient.",
-      "Don't use platform colors interchangeably or flood large unrelated surfaces with them.",
-      "Don't set paragraphs, long labels, or Chinese reading copy in the monospaced face.",
-      "Don't add motion that competes with reading or ignores the reduced-motion override."
+      "Don't 用已废弃实现的视觉词汇解释当前站点；当前系统就是 OINK 原生技术文档。",
+      "Don't 引入与 OINK 主题变量、导航或响应式壳层并行的第二套视觉语法。",
+      "Don't 在仓库中复制 OINK 组件形成平行设计系统；必要覆盖应小而明确。",
+      "Don't 用 Chakra Petch 或 IBM Plex Mono 排长篇中文正文。",
+      "Don't 添加破坏浅色、深色、窄屏、键盘和打印体验的单主题装饰。"
     ]
   }
 }
